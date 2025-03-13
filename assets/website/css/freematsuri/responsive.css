@@ -1,0 +1,1334 @@
+@media only screen and (max-width : 767px) {
+    .loader {
+        margin: -30px auto 0;
+    }
+    .ptb-80 {
+        padding: 50px 0;
+    }
+    .btn {
+        padding: 10px 26px;
+        font-size: 13px;
+    }
+    .form-group {
+        margin-bottom: .5rem;
+    }  
+    .form-control {
+        padding: 10px;
+        font-size: 13px;
+        height: 38px;
+    }
+    .form-control:focus {
+        box-shadow: 0 0 0 3px rgba(228,53,58,.80);
+    }
+    p {
+        font-size: 13px;
+    }
+    select.form-control:not([size]):not([multiple]) {
+        height: 40px;
+    }
+    .section-title {
+        margin-bottom: 40px;
+        padding-left: 25px;
+    }
+    .section-title h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    .section-title h3 {
+        font-size: 16px;
+    }
+    .section-title::before, .section-title::after {
+        width: 2px;
+    }
+    .section-title::after {
+        left: 7px;
+    }
+    .owl-theme .owl-nav [class*="owl-"] {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        line-height: 36px;
+    }
+	.top-header {
+		display: none;
+	}
+    .main-header-area .classynav ul li a {
+        font-size: 14px;
+    }
+	.main-header-area .nav-brand img {
+		height: 50px;
+	}
+    .main-banner {
+        height: 500px;
+    }
+    .main-banner h3 {
+        font-size: 18px;
+    }
+    .main-banner h2 {
+        font-size: 30px;
+        margin: 15px 0 20px;
+    }
+    .main-banner p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .home-slides.owl-theme .owl-nav [class*="owl-"] {
+        top: 85%;
+        margin-top: 0;
+    }
+    .home-slides.owl-theme .owl-nav .owl-next {
+        left: auto;
+    }
+    .lawyer-boxes {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+    .lawyer-boxes .box {
+        padding: 20px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .lawyer-boxes .box i {
+        font-size: 30px;
+    }
+    .lawyer-boxes .box h3 {
+        font-size: 18px;
+        margin: 16px 0 13px;
+    }
+    .about-area {
+        padding-bottom: 0;
+    }
+    .about-text p {
+        margin-bottom: 15px;
+    }
+    .about-text p b {
+        font-size: 14px;
+    }
+    .lawyer-features {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .lawyer-features .pull-left {
+        margin-right: 0;
+        float: none;
+        margin-bottom: 9px;
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+    .services-box {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .services-box .icon {
+        font-size: 25px;
+        width: 65px;
+        height: 65px;
+        line-height: 66px;
+        margin-bottom: 20px;
+    }
+    .services-box h3 a {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .browse-all-btn {
+        margin-top: 15px;
+    }
+    .register-area::after {
+        display: none;
+    }
+    .contact-now {
+        padding-right: 0;
+        margin-top: 0;
+    }
+    .appointment-form {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+	.appointment-area .appointment-form {
+		margin-top: 0;
+	}
+    .contact-now h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .contact-now p {
+        font-size: 14px;
+    }
+    .register-area .btn.btn-primary {
+        margin-top: 20px;
+    }
+    .practice-box {
+	    margin-bottom: 20px;
+    }
+    .practice-text {
+        padding: 25px 18px 20px;
+    }
+    .practice-text h3 a {
+	    font-size: 18px;
+    }
+    .single-working.right-arrow::before {
+        display: none;
+    }
+    .single-working {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .single-working:hover {
+        padding: 20px 18px;
+    }
+    .single-working .icon {
+        font-size: 35px;
+    }
+    .single-working .working-content h3 {
+        font-size: 19px;
+        margin: 16px 0 15px;
+    }
+    .our-working-way {
+        padding-bottom: 30px;
+    }
+    .funFacts {
+        margin-bottom: 30px;
+    }
+    .funFacts .icon {
+        font-size: 30px;
+        width: 70px;
+        height: 70px;
+        line-height: 65px;
+        margin-bottom: 8px;
+    }
+    .funFacts .text h3 {
+        font-size: 40px;
+    }
+    .fun-facts-area {
+        padding-bottom: 20px;
+    }
+    .why-choose-us {
+        padding-bottom: 25px;
+    }
+    .single-choose {
+        margin-bottom: 25px;
+    }
+    .single-choose h3 {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+    .single-choose span {
+        font-size: 90px;
+    }
+    .advertise-area {
+        padding: 50px 0;
+        text-align: center;
+    }
+    .advertise-area h3 {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .advertise-area .contact-btn {
+        text-align: center;
+    }
+    .blog-area {
+        padding-bottom: 10px;
+    }
+    .single-blog-post .post-content {
+        padding: 20px;
+    }
+    .single-blog-post .post-content h3 a {
+        font-size: 17px;
+    }
+    .single-blog-post .post-meta {
+        padding: 15px;
+    }
+    .single-feedback {
+        padding: 20px;
+        border-radius: 3px;
+    }
+    .single-feedback .pic {
+        margin-right: 18px;
+    }
+    .single-feedback .client-info h4 {
+        font-size: 16px;
+        margin-top: 21px;
+        margin-bottom: 2px;
+    }
+    .single-feedback .client-info span {
+        font-size: 12px;
+    }
+    .single-feedback ul {
+        position: relative;
+        right: 0;
+        top: 4px;
+    }
+    .about-area.about-style-two {
+        padding-bottom: 50px;
+    }
+    .about-style-two .about-image {
+        margin: 30px 0 0;
+    }
+    .about-style-two .video-btn a {
+        width: 60px;
+        height: 60px;
+        line-height: 62px;
+        font-size: 25px;
+    }
+    .why-choose-us-two::before {
+        display: none;
+    }
+    .servicesBox {
+        margin-bottom: 20px;
+    }
+    .servicesBox .services-text {
+        padding: 20px 18px;
+    }
+    .servicesBox .services-text h3 a {
+	    font-size: 18px;
+        margin-bottom: 13px;
+    }
+    .practice-style-two .practice-box {
+        margin-bottom: 20px;
+    }
+    .practice-style-two .browse-all-btn {
+        margin-top: 15px;
+    }
+    .blog-style-one {
+        padding-bottom: 50px;
+    }
+    .about-area.about-style-three {
+        padding-bottom: 50px;
+    }
+    .about-image-slider {
+        margin-top: 25px;
+    }
+    .page-title {
+        height: 210px;
+    }
+    .page-title h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .our-missionVision ul {
+        margin: 20px 0;
+    }
+    .our-missionVision .vision-content {
+        margin-top: 30px;
+    }
+    .practice-area .side-bar {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .side-bar-box {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .side-bar-box form button {
+        height: 38px;
+        width: 50px;
+    }
+    .side-bar-box .title {
+        font-size: 20px;
+        position: relative;
+    }
+    .side-bar-box .title::before {
+        width: 70px;
+        height: 3px;
+        bottom: -12px;
+    }
+    .categories-box ul li a {
+        font-size: 13px;
+    }
+    .tags-box ul li a {
+        font-size: 13px;
+    }
+    .side-bar-box .recent-post-img {
+        float: none;
+        width: 100%;
+    }
+    .side-bar-box .recent-post-content {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    .side-bar-box .recent-post-content ul li {
+        margin-right: 15px;
+    }
+    .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .side-bar-box .recent-post-content h3 {
+        margin-top: 10px;
+    }
+    .practice-details-content {
+        margin-top: 25px;
+    }
+    .practice-details-content h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .practice-details-content p b {
+	    margin-bottom: 18px;
+    }
+    .practice-details-content .blockquote {
+        padding: 18px;
+        margin: 20px 0;
+    }
+    .practice-details-content ul {
+        margin: 20px 0;
+        padding: 18px;
+    }
+    .practice-details-content ul li {
+        font-size: 13px;
+    }
+    .how-can-we-help {
+        margin-top: 25px;
+    }
+    .practice-details-content h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .practice-details-area .side-bar {
+        margin-top: 30px;
+    }
+    .services-area.services-style-three .services-box:hover .icon {
+        font-size: 25px;
+        width: 65px;
+        height: 65px;
+        line-height: 66px;
+    }
+    .services-area .side-bar {
+        margin-top: 30px;
+    }
+    .services-details-content {
+        margin-top: 25px;
+    }
+    .services-details-content h3 {
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+    .services-details-content p b {
+        margin: 18px 0;
+    }
+    .services-details-content .blockquote {
+        margin: 20px 0;
+        padding: 18px;
+    }
+    .services-details-area .side-bar {
+        margin-top: 30px;
+    }
+    .blog-style-two {
+        padding-bottom: 50px;
+    }
+    .blog-area .side-bar {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .blog-style-three {
+        padding-bottom: 50px;
+    }
+    .blog-details .img .date {
+        padding: 10px 14px;
+        line-height: 23px;
+        font-size: 15px;
+    }
+    .blog-details-content {
+        margin-top: 25px;
+    }
+    .blog-details-content ul li a {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+    .blog-details-content h3 {
+        font-size: 19px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+    .blog-details-content .text {
+        margin-top: 20px;
+    }
+    .blog-details-content .text p b {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    .blog-details-content .blockquote {
+        margin: 20px 0 25px;
+        padding: 18px;
+    }
+    .blog-categories {
+        padding: 20px 18px;
+    }
+    .blog-details-content .blog-categories ul li.title {
+        font-size: 13px;
+        margin-right: 10px;
+        text-transform: capitalize;
+    }
+    .blog-share-social {
+        padding: 20px 18px;
+    }
+    .blog-share-social ul li.title {
+        font-size: 13px;
+        margin-right: 0;
+        display: block;
+        margin-bottom: 14px;
+    }
+    .blog-share-social ul li a {
+        width: 30px;
+        height: 30px;
+        line-height: 29px;
+    }
+    .post-prev-next-button {
+        padding: 20px 18px;
+        text-align: center;
+    }
+    .post-prev-next-button .text-right {
+        text-align: center !important;
+        margin-top: 12px;
+    }
+    .post-prev-next-button a {
+        display: block;
+        padding: 12px 42px;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    .post-comments {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .post-comments .single-post-comments {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .post-comments .single-post-comments .content h4 {
+        font-size: 16px;
+        margin: 8px 0 10px;
+    }
+    .post-comments .content ul {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 10px;
+    }
+    .post-comments .single-post-comments.left-mr {
+	   margin-left: 30px;
+    }
+    .blog-details-area .side-bar {
+        margin-top: 30px;
+    }
+    .shop-top {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .shop-top .woocommerce-result-count {
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .shop-top form {
+        margin-top: 15px;
+    }
+    .single-product {
+        margin-bottom: 20px;
+    }
+    .product-content {
+        padding: 20px;
+    }
+    .product-content h3 a {
+        font-size: 18px;
+    }
+    .product-content h4 {
+        font-size: 15px;
+        margin: 10px 0 15px;
+    }
+    .shop-area .side-bar {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .product-body {
+        margin-top: 25px;
+    }
+    .product-body h3 {
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .product-body .price {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .product-body .price h4 {
+        font-size: 17px;
+    }
+    .product-body form {
+        margin: 18px 0;
+    }
+    .product-body form .btn.btn-primary {
+        padding: 0 14px;
+        height: 38px;
+        line-height: 40px;
+    }
+    .product-body form .add-to-wishlist {
+        padding: 8px 13px;
+    }
+    .product-body ul .title {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+    .product-body ul.share {
+        margin-top: 18px;
+    }
+    .product-body ul.share a {
+        width: 30px;
+        height: 30px;
+        line-height: 31px;
+    }
+    .product-entry {
+        margin-top: 30px;
+    }
+    .product-entry .tabset > label {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+    .product-entry .tab-panel {
+        padding: 18px;
+    }
+    .product-features {
+        margin-top: 20px;
+        padding: 18px;
+    }
+    .product-features ul li:first-child {
+        margin-top: 0;
+        font-size: 13px;
+    }
+    .product-entry .tab-panel h3 {
+        font-size: 18px;
+    }
+    .product-entry .tab-panel .review-post {
+        margin-top: 25px;
+    }
+    .product-entry .tab-panel .review-post .content {
+        padding-left: 98px;
+        z-index: 1;
+    }
+    .product-entry .review-post .content span {
+	    font-size: 13px;
+    }
+    .product-entry .review-post .content h3 {
+        font-size: 18px;
+        margin-top: 6px;
+    }
+    .product-entry .review-post .content p {
+        margin-top: 10px;
+    }
+    .product-entry .tab-panel .border {
+        margin: 20px 0;
+    }
+    .product-entry .tab-panel .review-post .content ul {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 15px;
+    }
+    .product-entry .add-review h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .product-entry .add-review h4 {
+        font-size: 14px;
+    }
+    .product-entry .add-review ul li {
+        margin-right: 10px;
+    }
+    .shop-details-area .side-bar {
+        margin-top: 30px;
+    }
+    .cart-table thead .table-heading th {
+        padding: 15px 30px;
+        font-size: 15px;
+    }
+    .cart-table .product-thumb .cart-product {
+        display: block;
+    }
+    .cart-table .product-thumb .product-name {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+        font-size: 13px;
+    }
+    .apply-coupon-btn {
+        margin-top: 15px;
+    }
+    .apply-coupon-btn .form-control {
+        width: 53%;
+    }
+    .apply-coupon-btn .form-group .btn {
+	    margin-top: -2px;
+        height: 38px;
+        padding: 0 20px;
+    }
+    .update-cart-btn {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .update-cart-btn .btn.btn-primary {
+        display: block;
+        width: 100%;
+    }
+    .cart-totals {
+        margin: 30px auto 0;
+        padding: 18px;
+    }
+    .cart-totals h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .cart-totals ul li {
+        font-size: 13px;
+    }
+    .cart-totals ul li.border {
+        margin: 15px 0;
+    }
+    .cart-totals .btn.btn-primary {
+        padding: 10px 0;
+        display: block;
+        margin-top: 6px;
+    }
+    .order-table .table-responsive {
+        display: block;
+        margin-bottom: 0;
+    }
+    .checkout-area .title {
+        font-size: 18px;
+        margin: 0 0 35px;
+    }
+    .checkout-area .title::before {
+        bottom: -12px;
+        height: 3px;
+        width: 60px;
+    }
+    .check-out-box .form-group lable {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+    .check-out-box .form-check {
+	    padding-left: 0;
+        margin-top: 10px;
+    }
+    .check-out-box .form-check label {
+        font-size: 13px;
+        top: -1px;
+        left: 2px;
+    }
+    .shipping-box {
+        margin-top: 25px;
+    }
+    .order-table {
+        margin-top: 30px;
+    }
+    .order-table .table > thead > tr > th {
+        font-size: 14px;
+    }
+    .checkout-area .payment-holder {
+        margin-top: 30px;
+    }
+    .checkout-area .payment-holder .title {
+        margin-bottom: 25px;
+    }
+    .single-case-result {
+        margin-bottom: 20px;
+    }
+    .case-result-area .side-bar {
+        margin: 30px 0;
+    }
+    .tabs label {
+        padding: 12px 16px;
+        margin-right: 0;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    .caseresult-details-img {
+        margin-top: 0;
+    }
+    .caseresult-details-content {
+        margin-top: 25px;
+    }
+    .caseresult-details-content h3 {
+        font-size: 19px;
+        margin: 20px 0;
+    }
+    .caseresult-details-content p b {
+        margin-bottom: 18px;
+        font-size: 13px;
+    }
+    .caseresult-details-content ul {
+        margin-top: 20px;
+        padding: 18px;
+    }
+    .caseresult-details-area .side-bar {
+        margin-top: 30px;
+    }
+	.our-attorney:hover .attorney-content {
+		transform: translateY(-280%);
+	}
+    .attorneys-style-one {
+        padding-bottom: 30px;
+    } 
+    .attorneys-style-one .our-attorney {
+        margin: 7px 0 20px;
+    }
+    .attorneys-style-two {
+        padding-bottom: 30px;
+    }
+    .attorneys-style-two .single-attorney {
+        margin-bottom: 20px;
+    }
+    .attorneys-style-three {
+        padding-bottom: 30px;
+    }
+    .attorneys-style-three .ourAttorney {
+        margin-bottom: 20px;
+    }
+    .attorneys-details-area {
+        padding-bottom: 0;
+    }
+    .attorney-details h5 {
+        font-size: 15px;
+    }
+    .attorney-details h3 {
+        font-size: 22px;
+        margin: 10px 0 20px;
+    }
+    .attorney-details p {
+        margin-top: 16px;
+    }
+    .attorney-details .attorney-social {
+        margin-top: 20px;
+    }
+    .attorney-details .attorney-social li a {
+	    width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .attorney-contact-info {
+        margin-top: 25px;
+    }
+    .attorney-contact-info ul.pull-left {
+        margin-right: 0;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .attorneys-details-area .attorney-image {
+	    position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .attorneys-info-area .title {
+        font-size: 19px;
+        margin: 0 0 20px;
+        line-height: 1.6;
+    }
+    .attorney-desc p {
+        margin: 20px 0 0;
+    }
+    .attorney-skill {
+        margin-top: 25px;
+    }
+    .progress-title {
+        font-size: 15px;
+        text-transform: capitalize;
+        margin: 0 0 17px;
+    }
+    .progress {
+        height: 6px;
+        margin-bottom: 20px;
+    }
+    .progress::before, .progress::after {
+        width: 15px;
+        height: 15px;
+        top: -5px;
+    }
+    .progress .progress-value {
+        line-height: 30px;
+    }
+    .attorney-award {
+        margin-top: 30px;
+    }
+    .attorney-award .col-lg-3 {
+        float: left;
+        width: 50%;
+    }
+    .appointment-area {
+        padding-bottom: 0;
+    }
+    .appointment-area .appointment-image {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 35px;
+        text-align: center;
+    }
+    .error-content {
+        padding: 20px;
+    }
+    .error-content h3 {
+        font-size: 85px;
+        margin-bottom: 15px;
+    }
+    .error-content h4 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    .error-content p {
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    .faq-area h2 {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+    .card-header {
+        padding: 7px 15px;
+    }
+    .card-header a h5 {
+        font-size: 14px;
+        line-height: 21px;
+        position: relative;
+    }
+    .card-header i {
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .card-body {
+        padding: 16px;
+    }
+    .faq-contact {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .faq-contact h3 {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+    .login-content {
+        padding: 18px;
+    }
+    .login-content h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .login-content ul li a {
+        padding: 15px 20px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .login-content form {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    .login-content p a {
+        margin: 15px 0 0;
+        font-size: 13px;
+    }
+    .login-content h4 {
+        font-size: 15px;
+    }
+    .signup-content {
+        padding: 18px;
+    }
+    .signup-content h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .signup-content .form-check {
+        margin-top: 12px;
+    }
+    .signup-content .form-check-label {
+        font-size: 13px;
+        position: relative;
+        top: 2px;
+    }
+    .contact-info {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .contact-info i {
+        font-size: 25px;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+    .contact-info h3 {
+        font-size: 18px;
+        margin: 25px 0 10px;
+    }
+    .contact-info p a {
+        font-size: 13px;
+    }
+    .contact-area .content {
+        margin-top: 20px;
+    }
+    .contact-form {
+        padding: 20px 18px;
+    }
+    .contactBox p a {
+        font-size: 13px;
+    }
+    .contactBox p i {
+        font-size: 20px;
+    }
+    .contactBox p .fa.fa-envelope {
+        left: 0;
+    }
+    .contactBox {
+        margin-bottom: 8px;
+    }
+    .contact-style-two .contact-form {
+        padding: 20px 18px;
+        margin-top: 20px;
+    }
+    
+    .footer-area {
+        padding-bottom: 0;
+    }
+    .footer-area .widgets {
+        margin-bottom: 25px;
+    }
+    .footer-area .widgets .social li a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .footer-area .widgets h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .footer-area .widgets .usefull-links li {
+        margin-top: 9px;
+    }
+    .copyright-area {
+        margin-top: 25px;
+        padding: 20px 0;
+    }
+    .go-top {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+    .services-box h3 a {
+        font-size: 17px;
+    }
+    .lawyer-features .pull-left {
+        margin-right: 40px;
+        float: left;
+        margin-bottom: 0;
+    }
+    .side-bar-box .recent-post-content ul li {
+        margin-right: 4px;
+    }
+    .side-bar-box .recent-post-content a {
+        font-size: 13px;
+    }
+    .practice-area .side-bar {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .practice-details-area .side-bar-box .recent-post-img {
+        float: left;
+        width: 100px;
+    }
+    .practice-details-area .side-bar-box .recent-post-content {
+        padding-left: 110px;
+        margin-top: 0;
+    }
+    .practice-details-area .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .services-area .side-bar {
+        margin-top: 0;
+    }
+    .services-details-area .side-bar-box .recent-post-img {
+        float: left;
+        width: 100px;
+    }
+    .services-details-area .side-bar-box .recent-post-content {
+        padding-left: 110px;
+        margin: 10px 0 0;
+    }
+    .services-details-area .side-bar-box .recent-post-content h3 {
+        margin-top: 5px;
+    }
+    .services-details-area .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .blog-area .side-bar {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .blog-details-content .blog-categories ul li.title {
+        font-size: 15px;
+        margin-right: 12px;
+    }
+    .blog-share-social ul li.title {
+        font-size: 14px;
+        margin-right: 15px;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .blog-details-content ul li a {
+        margin-right: 2px;
+    }
+    .post-prev-next-button .text-right {
+        margin-top: 0;
+    }
+    .post-leave-reply ul li a {
+        margin-right: 10px;
+        margin-top: 12px;
+    }
+    .post-comments .single-post-comments.left-mr {
+        margin-left: 75px;
+    }
+    .blog-details-area .side-bar-box .recent-post-img {
+        float: left;
+        width: 100px;
+    }
+    .blog-details-area .side-bar-box .recent-post-content {
+        padding-left: 110px;
+        margin-top: 0;
+    }
+    .blog-details-area .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .shop-area .side-bar {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .product-body {
+        margin-top: 0;
+    }
+    .shop-details-area .side-bar-box .recent-post-img {
+        float: left;
+        width: 100px;
+    }
+    .shop-details-area .side-bar-box .recent-post-content {
+        padding-left: 110px;
+        margin-top: 0;
+    }
+    .shop-details-area .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .update-cart-btn {
+        text-align: right;
+        margin-top: 11px;
+    }
+    .cart-totals .btn.btn-primary {
+        padding: 10px 26px;
+        display: inline-block;
+        margin-top: 0;
+    }
+    .order-table {
+        margin-top: 0;
+    }
+    .case-result-area .side-bar {
+        margin: 0;
+    }
+    .caseresult-details-area .side-bar-box .recent-post-img {
+        float: left;
+        width: 100px;
+    }
+    .caseresult-details-area .side-bar-box .recent-post-content {
+        padding-left: 110px;
+        margin-top: 0;
+    }
+    .caseresult-details-area .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+	.top-header p {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+	.main-header-area .nav-brand img {
+		width: 90px;
+	}
+    .top-header {
+        padding: 10px 0;
+    }
+    .lawyer-boxes .box {
+        padding: 25px 18px;
+    }
+    .lawyer-boxes .box h3 {
+        font-size: 18px;
+    }
+    .contact-now {
+        padding-right: 20px;
+        margin-top: 130px;
+    }
+    .appointment-form {
+        padding-left: 20px;
+    }
+    .register-area .section-title h2 {
+        font-size: 29px;
+    }
+    .single-working {
+        padding: 18px;
+    }
+    .single-working:hover {
+        padding: 18px;
+    }
+    .fun-facts-area {
+        padding-bottom: 50px;
+    }
+    .funFacts .icon {
+        margin-bottom: 12px;
+    }
+    .funFacts {
+        margin-bottom: 30px;
+    }
+    .single-feedback ul {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 5px;
+    }
+    .about-style-two .about-image {
+        margin: 30px 0 0;
+    }
+    .about-style-two .about-image img {
+        width: 100%;
+    }
+    .why-choose-us-two::before {
+        background-position: center;
+    }
+    .about-image-slider {
+        margin-top: 30px;
+    }
+    .appointment-area {
+        padding-bottom: 0;
+    }
+    .appointment-area .appointment-image {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .side-bar-box .recent-post-img {
+        float: none;
+        width: 100%;
+    }
+    .side-bar-box .recent-post-content {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    .side-bar-box .recent-post-content a {
+        font-size: 14px;
+    }
+    .practice-details-content .blockquote {
+        padding: 20px;
+    }
+    .practice-details-content ul {
+        padding: 20px;
+    }
+    .card-header a h5 {
+        font-size: 15px;
+        line-height: 1.6;
+        position: relative;
+    }
+    .card-header i {
+        float: none;
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 12%;
+    }
+    .blog-details-content .blockquote {
+        padding: 20px;
+    }
+    .blog-share-social ul .title {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0 !important;
+    }
+    .post-prev-next-button a {
+        padding: 14px 40px;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    .post-comments .single-post-comments.left-mr {
+        margin-left: 65px;
+    }
+    .product-body {
+        margin-top: 30px;
+    }
+    .product-body h3 {
+        text-transform: capitalize;
+    }
+    .apply-coupon-btn .form-control {
+        width: 57%;
+    }
+    .apply-coupon-btn .form-group .btn {
+        padding: 0 20px;
+    }
+    .tabs label {
+        padding: 10px 22px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .attorneys-details-area {
+        padding-bottom: 0;
+    }
+    .attorneys-details-area .attorney-image {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .attorney-skill {
+        margin-top: 30px;
+    }
+    .contactBox p .fa.fa-envelope {
+        left: 0;
+    }
+    .contactBox {
+        margin-bottom: 10px;
+    }
+    .contactBox p i {
+        left: 1px;
+    }
+    .contact-style-two .contact-form {
+        margin-top: 40px;
+    }
+    .footer-area .widgets {
+        margin-bottom: 30px;
+    }
+    .copyright-area {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+	.services-box h3 a {
+	    font-size: 19px;
+    }
+    .single-working:hover {
+        padding: 25px 25px;
+    }
+    .single-working .working-content h3 {
+        font-size: 19px;
+    }
+    .practice-text h3 a {
+        font-size: 18px;
+    }
+    .appointment-area .appointment-image {
+        top: 20px;
+    }
+    .product-body h3 {
+	   text-transform: capitalize;
+    }
+}

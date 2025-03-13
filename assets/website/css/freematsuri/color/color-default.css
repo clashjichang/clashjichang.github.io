@@ -1,0 +1,428 @@
+.list-unstyled li {
+	color: #d9534f;
+}
+a:hover, a:focus, a:active {
+    color: #e4353a;
+}
+.btn-primary {
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.btn-primary:hover, .btn-primary:focus {
+	color: #e4353a;
+	border-color: #e4353a;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+	color: #fff;
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.form-control:focus {
+	box-shadow: 0 0 0 4px rgba(228,53,58,.80);
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+	background: #e4353a;
+}
+.section-title::before, .section-title::after {
+	background: #e4353a;
+}
+.section-title h2 span {
+    color: #e4353a;
+}
+.light .classy-navbar-toggler .navbarToggler span {
+	background-color: #e4353a;
+}
+.light .classynav ul li.megamenu-item ul li .find-out-more-btn {
+	color: #e4353a;
+}
+.main-header-area .classynav ul li a.active, .main-header-area .classynav ul li a:hover {
+	color: #e4353a;
+}
+.main-header-area .classynav ul li .dropdown .active a {
+	color: #e4353a;
+}
+.light .classynav ul li.megamenu-item ul .active a {
+	color: #e4353a;
+}
+.main-header-area .searchbtn:hover {
+	color: #e4353a !important;
+}
+.main-header-area .light .classynav ul li .dropdown li .dropdown li a:hover {
+	color: #e4353a;
+}
+.main-header-area .light .classynav ul li .dropdown li .dropdown .active a {
+	color: #e4353a;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.main-header-area .searchbtn {
+		background-color: #e4353a !important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.main-header-area .searchbtn {
+		background-color: #e4353a;
+	}
+}
+.loader #largeBox {
+    background-color: #e4353a;
+}
+.top-header p a:hover, .top-header p a:focus {
+    color: #e4353a;
+}
+.top-header ul li a:hover, .top-header ul li a:focus {
+    background: #e4353a;
+    border-color: #e4353a;
+}
+#search .close {
+	color: #e4353a;
+}
+#search .close:hover {
+    background: #e4353a;
+    border-color: #e4353a;
+}
+.main-banner h2 span {
+    color: #e4353a;
+}
+.main-banner .btn-primary {
+	color: #e4353a;
+}
+.main-banner .btn-primary:hover, .main-banner .btn-primary:focus {
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.lawyer-features ul li i {
+	color: #e4353a;
+}
+.services-box:hover {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.services-box .icon {
+    background: #e4353a;
+}
+.services-box:hover .icon {
+    color: #e4353a;
+}
+.register-area::after {
+	background: #e4353a;
+}
+.contact-now .btn.btn-primary {
+	color: #e4353a;
+}
+.register-area .btn-primary:hover, .register-area .btn-primary:focus {
+	color: #e4353a;
+}
+.practice-box:hover {
+	background: #e4353a;
+}
+.practice-box .practice-link a:hover {
+	background: #e4353a;
+}
+.single-working:hover {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.single-working.right-arrow::before {
+	background: #e4353a;
+}
+.single-working .icon {
+	color: #e4353a;
+}
+.single-choose:hover span {
+    color: #e4353a;
+}
+.our-attorney::before {
+	border: 3px solid #e4353a;
+}
+.our-attorney:hover .post {
+	color: #e4353a;
+}
+.our-attorney .social li a {
+	background: #e4353a;
+    border: 1px solid #e4353a;
+}
+.our-attorney .social li a:hover { 
+    color: #e4353a;
+    border-color: #e4353a;
+}
+.funFacts:hover .icon {
+    border-color: #e4353a;
+    background: #e4353a;
+}
+.why-choose-us-two {
+	background: #e4353a;
+}
+.single-blog-post .blog-link a {
+	color: #e4353a;
+}
+.single-blog-post .blog-link a:hover {
+	background: #e4353a;
+}
+.single-blog-post .date {
+	background: #e4353a;
+}
+.single-blog-post .post-meta ul li a:hover {
+	color: #e4353a;
+}
+.single-blog-post .post-meta ul li a i {
+	color: #e4353a;
+}
+.single-feedback ul li {
+    color: #e4353a;
+}
+.lawyer-boxes .box i {
+	background: #e4353a;
+}
+.page-title ul li {
+	color: #e4353a;
+}
+.page-title ul li a:hover {
+    color: #e4353a;
+}
+.our-missionVision ul li i {
+    color: #e4353a;
+}
+.our-mission ul li i {
+    color: #e4353a;
+}
+.single-gallery .picture-icon a {
+	color: #e4353a;
+}
+.single-gallery .picture-icon a:hover {
+	background: #e4353a;
+}
+.single-case-result .case-content span {
+	background: #e4353a;
+}
+.single-case-result .case-content .btn.btn-primary {
+	color: #e4353a;
+}
+.single-case-result .case-content .btn.btn-primary:hover {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.tabs label:hover {
+	background: #e4353a;
+}
+.tabs input[type="radio"]:checked + label {
+	background: #e4353a;
+}
+.side-bar-box form button:hover {
+	background: #e4353a;
+}
+.side-bar-box .title::before {
+	background: #e4353a;
+}
+.tags-box ul li a {
+	border: 1px solid #e4353a;
+}
+.side-bar-box .recent-post-content ul li a:hover {
+	color: #e4353a;
+}
+.servicesBox:hover {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.servicesBox .link-icon a {
+	color: #e4353a;
+}
+.servicesBox .link-icon a:hover {
+	background: #e4353a;
+}
+.blog-details .img .date {
+	background: #e4353a;
+}
+.blog-details-content ul li a:hover {
+	color: #e4353a;
+}
+.blog-share-social ul li a {
+	background: #e4353a;
+	border: 1px solid #e4353a;
+}
+.blog-share-social ul li a:hover {
+	color: #e4353a;
+}
+.blog-share-social ul li a:hover i {
+    color: #e4353a;
+}
+.post-prev-next-button a {
+	background: #e4353a;
+    color: #fff;
+}
+.post-comments .single-post-comments .content a {
+	color: #e4353a;
+}
+.post-comments .content ul {
+	color: #e4353a;
+}
+.post-leave-reply ul li a:hover i {
+	color: #e4353a;
+}
+.about-style-two .about-image::before {
+	background: #e4353a;
+}
+.services-area.services-style-three .services-box:hover {
+	background: #e4353a;
+}
+.single-attorney::before, .single-attorney::after {
+	background: #e4353a;
+}
+.single-attorney .pic {
+	border: 2px solid #e4353a;
+}
+.single-attorney .social li a {
+	background: #e4353a;
+	border: 1px solid #e4353a;
+}
+.single-attorney .social li a:hover {
+	color: #e4353a;
+}
+.ourAttorney {
+	color: #e4353a;
+}
+.ourAttorney:hover {
+	background: #e4353a;
+}
+.ourAttorney .social {
+	background: #e4353a;
+}
+.ourAttorney .social li a {
+	color: #e4353a;
+}
+.attorney-details .attorney-social li a:hover {
+	background: #e4353a;
+}
+.attorney-contact-info ul li a:hover {
+    color: #e4353a;
+}
+.progress::before, .progress::after {
+	background: #e4353a;
+}
+.progress .progress-bar {
+	background: #e4353a;
+}
+.progress .progress-value {
+	background: #e4353a;
+}
+.product-body ul.categories-tags a:hover {
+	color: #e4353a;
+}
+.product-body ul.share a:hover {
+    background: #e4353a;
+}
+.product-entry .tabset > label {
+	border: 1px dashed #e4353a;
+}
+.product-entry .tabset > label:hover, .product-entry .tabset > input:focus + label {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.product-entry .tabset > input:checked + label {
+	background: #e4353a;
+    border-color: #e4353a;
+}
+.product-entry .tab-panel {
+	border: 1px dashed #e4353a;
+}
+.product-features ul li a {
+	color: #e4353a;
+}
+.product-entry .tab-panel .review-post .content ul li {
+	color: #e4353a;
+}
+.cart-table thead .table-heading th {
+	border-top: 1px dashed #e4353a;
+}
+.cart-table .table > tbody > tr > td, .cart-table .table > tbody > tr > th, .cart-table .table > tfoot > tr > td, .cart-table .table > tfoot > tr > th, .cart-table .table > thead > tr > td, .cart-table .table > thead > tr > th {
+	border: 1px dashed #e4353a;
+}
+.checkout-area .title::before {
+	background: #e4353a;
+}
+.order-table .table > tbody > tr > td, .order-table .table > tbody > tr > th, .order-table .table > tfoot > tr > td, .order-table .table > tfoot > tr > th, .order-table .table > thead > tr > td, .order-table .table > thead > tr > th {
+	border: 1px dashed #e4353a;
+}
+.payment-holder input[type="radio"]:checked ~ .check {
+	background: #e4353a;
+	border-color: #e4353a;
+}
+.payment-holder .place-order {
+	background: #e4353a;
+}
+.payment-holder .place-order .btn {
+	color: #e4353a;
+}
+.contact-info i {
+	background: #e4353a;
+}
+.contact-info p a:hover {
+	color: #e4353a;
+}
+.contactBox p i {
+	color: #e4353a;
+}
+.contactBox p a:hover {
+	color: #e4353a;
+}
+.error-content h3 {
+	color: #e4353a;
+}
+.card {
+	border: 1px solid #e4353a;
+}
+.card-header {
+	background-color: #e4353a;
+}
+.login-content ul li a:hover {
+    background: #e4353a;
+}
+.login-content p a:hover {
+    color: #e4353a;
+}
+.login-content h4 a {
+	color: #e4353a;
+}
+.signup-content a {
+	color: #e4353a;
+}
+.page-link {
+	color: #e4353a;
+	border: 1px solid #e4353a;
+}
+.page-item.disabled .page-link {
+	color: #e4353a;
+	border-color: #e4353a;
+}
+.page-link:hover {
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.page-item.active .page-link {
+	background-color: #e4353a;
+	border-color: #e4353a;
+}
+.footer-area .widgets .social li a {
+	color: #e4353a;
+}
+.footer-area .widgets .social li a:hover {
+	background: #e4353a;
+}
+.footer-area .widgets .usefull-links li a:hover {
+	color: #e4353a;
+}
+.footer-area .widgets .contact-us li i {
+	color: #e4353a;
+}
+.footer-area .widgets .contact-us li a:hover {
+	color: #e4353a;
+}
+.copyright-area p a {
+	color: #e4353a;
+}
+.go-top:hover {
+	background-color: #e4353a;
+}
