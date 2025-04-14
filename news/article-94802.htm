@@ -1,0 +1,251 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashjichang.github.io/news/article-94802.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LevelDB 学习笔记5：版本控制_在线工具</title>
+        <meta name="description" content="由于压缩是在后台线程异步进行的，所以会出现新老 sstable 同时存在的状态 但合并完成后，老的 sstable 并不能直接删除，必须等到没有人引用它们，才可以删除 因此数据库可能同时存在多个 Ve" />
+        <link rel="icon" href="/assets/website/img/freematsuri/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Clash机场 免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashjichang.github.io/news/article-94802.htm" />
+    <meta property="og:site_name" content="Clash机场 免费节点订阅官网" />
+    <meta property="og:title" content="LevelDB 学习笔记5：版本控制_在线工具" />
+    <meta property="og:image" content="https://clashjichang.github.io/uploads/20241222/cce602c55badd5be765bae9b796d3f93.webp" />
+        <meta property="og:release_date" content="2025-04-13T07:18:24" />
+    <meta property="og:updated_time" content="2025-04-13T07:18:24" />
+        <meta property="og:description" content="由于压缩是在后台线程异步进行的，所以会出现新老 sstable 同时存在的状态 但合并完成后，老的 sstable 并不能直接删除，必须等到没有人引用它们，才可以删除 因此数据库可能同时存在多个 Ve" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="LevelDB 学习笔记5：版本控制_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/animate.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/font-awesome.min.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/magnific-popup.css">
+    <!-- IcoFont Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/icofont.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/owl.carousel.min.css">
+    <!-- Classy Nav Min CSS-->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/classy-nav.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/style.css">
+    <!-- Responsive Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/responsive.css">
+    <!-- Color Default CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/color/color-default.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKNC8VH07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMKNC8VH07');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Start Preloader Area -->
+    <div id="preloader-area">
+        <div class="loader">
+            <div id="largeBox"></div>
+            <div id="smallBox"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Main Menu Area -->
+    <div class="main-header-area header-sticky">
+        <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="eduNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/">
+                                        <span>Clash机场</span>
+                                        </a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Menu Area -->
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h1>LevelDB 学习笔记5：版本控制_在线工具</h1>
+                            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li>/</li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>/</li>
+                                <li>正文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <!-- Start About Area -->
+    <section class="about-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				</h1> <ul> <li>由于压缩是在后台线程异步进行的，所以会出现新老 sstable 同时存在的状态</li> <li>但合并完成后，老的 sstable 并不能直接删除，必须等到没有人引用它们，才可以删除</li> <li>因此数据库可能同时存在多个 Version，它们的集合是 VersionSet <ul> <li>所有的 version 组织在一个双向链表里，最新的 version 称为 current</li> </ul> </li> </ul> <h2 id="版本变更">版本变更</h2> <ul> <li>VersionEdit 是新 Version 相较于旧 Version 变动的内容 <ul> <li>VersionOld + VersionEdit = VersionNew</li> <li>VersionEdit 对应 MANIFEST 文件里的一条记录 <ul> <li> <code>EncodeTo()</code> 和 <code>DecodeFrom()</code> 方法分别用于将 VersionEdit 序列化为 manifest 记录和从 MANIFEST 记录中反序列化出 VersionEdit</li> </ul> </li> </ul> </li> <li>MANIFEST 文件本质上也是日志文件，格式和 redo log 是相同的 <ul> <li>第一条记录是全量的 LevelDB 版本信息</li> <li>后续每一条记录都是 LevelDB 版本变更信息</li> <li>重启后能通过 MANIFEST 文件恢复版本信息</li> </ul> </li> <li>调用 <code>LogAndApply()</code> 把 VersionEdit 应用到当前版本上，并新增一条记录 <ul> <li>以下几种情况下会被调用 <ul> <li>打开 DB 的时候，从 MANIFEST 文件中恢复出版本信息后，会在新的 MANIFEST 文件中提交一条全量的版本信息</li> <li>minor compaction 完成后，提交新增的 sstable</li> <li>major compaction 完成后，提交 sstable 变动</li> </ul> </li> </ul> </li> <li> <code>VersionSet::Builder</code></p> <ul> <li>帮助执行版本变更的工具类</li> <li>以某个版本为基础，不断 Apply 版本变更，得到最终的版本</li> <li> <code>LogAndApply()</code> 和从 manifest 文件中恢复版本信息的时候都会用到它<br /><img decoding="async" src="https://img2022.cnblogs.com/blog/1099671/202204/1099671-20220418233012211-1847290373.png" alt="LevelDB 学习笔记5：版本控制_在线工具"> </li> </ul> </li> </ul> <h2 id="从重启中恢复">从重启中恢复</h2> <p>从重启中恢复需要做两件事</p> <ul> <li>恢复版本信息</li> <li>重做 WAL 中记录的操作恢复 memtable 中的内容</li> </ul> <h3 id="恢复版本信息">恢复版本信息</h3> <ul> <li>主要逻辑在 <code>VersionSet::Recover()</code> 中</li> <li>读取 current 文件的内容找到 MANIFEST 文件名</li> <li>遍历 manifest 文件，将所有记录 Apply 到 Version Builder 上</li> <li>从 Builder 中获得最终的 Version，将它加入 VersionSet，并作为当前版本使用</li> <li>检查现存的 MANIFEST 文件能否重用 <ul> <li>如果旧的 MANIFEST 文件大小不是太大就可以重用它</li> <li>因为重启是唯一一处 MANIFEST 文件大小缩小的地方，我们不想让 MANIFEST 文件大小无限增长</li> </ul> </li> <li>如果不能重用，就会提交一条 MANIFEST 记录到新的 MANIFEST 文件里，包含了当前版本的全量信息</li> </ul> <h3 id="恢复-memtable-中的内容">恢复 memtable 中的内容</h3> <ul> <li>主要逻辑在 <code>DBImpl::Recover()</code> 的后半部分</li> <li>收集需要 redo 的日志文件 <ul> <li>做 minor compaction 后，修改记录会被写到 MANIFEST 文件中，其中包括日志文件的文件号</li> <li>因此 MANIFEST 中最新记录的日志文件号就是最后被写入磁盘的 memtable 的日志文件号，文件号大于它的日志文件都视为需要 redo 的</li> </ul> </li> <li>redo <ul> <li>根据文件号顺序，遍历所有需要 redo 的日志文件</li> <li>将日志记录转换为 WriteBatch</li> <li>redo 过程中，如果发现 memtable 大小超过阈值，直接对它做 minor compaction</li> </ul> </li> </ul> <h2 id="repairer">Repairer</h2> <p>如果 MANIFEST 文件丢失，那么能否恢复出版本信息呢？</p> <p>答案是可以的，LevelDB 提供了 <code>Repairer</code> 类用来从日志文件和 sstable 文件中恢复出版本信息</p> <ul> <li>所有日志文件都会被转换为 sstable 文件</li> <li>扫描所有 sstable 文件并计算 <ul> <li>最大最小 key</li> <li>最大序列号</li> </ul> </li> <li>用这些信息恢复上次运行的版本信息</li> </ul> <p>恢复过程遍历了整个 DB 的全部文件，所以是相当耗时的过程</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94251.htm">FreeRTOS进阶列表和列表项示例分析_操作系统</a></p>
+                                        <p>下一个：<a href="/news/article-94803.htm">领养狗什么意思（领养狗的意思）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-14-free-subscribe-node.htm" title="Clash机场 | 4月14日21.1M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">Clash机场 | 4月14日21.1M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-12-free-subscribe-node.htm" title="Clash机场 | 4月12日22.7M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">Clash机场 | 4月12日22.7M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-clash-v2ray-ss-ssr.htm" title="Clash机场 | 3月15日19.5M/S|免费SSR/Clash/V2ray/Shadowrocket订阅节点分享">Clash机场 | 3月15日19.5M/S|免费SSR/Clash/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-80265.htm" title="宠物粮进货渠道在哪里找（宠物粮食进货渠道）">宠物粮进货渠道在哪里找（宠物粮食进货渠道）</a></li>
+                        <li class="py-2"><a href="/news/article-68899.htm" title="golang bufio解析">golang bufio解析</a></li>
+                        <li class="py-2"><a href="/news/article-93279.htm" title="简历准备及面试技巧，你应该知道的一切">简历准备及面试技巧，你应该知道的一切</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-node-share.htm" title="Clash机场 | 4月3日18.3M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">Clash机场 | 4月3日18.3M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-node-share.htm" title="Clash机场 | 3月9日20.3M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享">Clash机场 | 3月9日20.3M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-node-subscribe.htm" title="Clash机场 | 3月23日19.8M/S|免费Shadowrocket/V2ray/Clash/SSR订阅节点分享">Clash机场 | 3月23日19.8M/S|免费Shadowrocket/V2ray/Clash/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-78248.htm" title="宠物领养app下载苹果版安装（宠物领养app下载苹果版安装最新）">宠物领养app下载苹果版安装（宠物领养app下载苹果版安装最新）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+    <!-- Start Footer Area -->
+<footer class="footer-area ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+<div class="go-top"><i class="fa fa-angle-up"></i></div>
+<!-- jQuery Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery-min.js"></script>
+<!-- Prpper JS -->
+<script src="/assets/website/js/frontend/freematsuri/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/bootstrap.min.js"></script>
+<!-- Jquery Magnific Popup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.magnific-popup.min.js"></script>
+<!-- Jquery Mixitup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.mixitup.min.js"></script>
+<!-- Owl Carousel Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/owl.carousel.min.js"></script>
+<!-- Jquery CounterUp Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.counterup.min.js"></script>
+<!-- Waypoints Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/waypoints.min.js"></script>
+<!-- Wow Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/wow.min.js"></script>
+<!-- Classy Nav Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/classy-nav.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/contact-form-script.js"></script>
+<!-- Main JS -->
+<script src="/assets/website/js/frontend/freematsuri/main.js"></script>
+<script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+<script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
