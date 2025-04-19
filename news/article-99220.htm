@@ -1,0 +1,251 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashjichang.github.io/news/article-99220.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript相邻元素平均值的数组方法详解</title>
+        <meta name="description" content="假设我们有一个数字数组- const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&" />
+        <link rel="icon" href="/assets/website/img/freematsuri/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Clash机场 免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashjichang.github.io/news/article-99220.htm" />
+    <meta property="og:site_name" content="Clash机场 免费节点订阅官网" />
+    <meta property="og:title" content="JavaScript相邻元素平均值的数组方法详解" />
+    <meta property="og:image" content="https://clashjichang.github.io/uploads/20241222/2147e110d55ac0ee5f165b653aca1fc5.webp" />
+        <meta property="og:release_date" content="2025-04-19T08:57:20" />
+    <meta property="og:updated_time" content="2025-04-19T08:57:20" />
+        <meta property="og:description" content="假设我们有一个数字数组- const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="JavaScript相邻元素平均值的数组方法详解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/animate.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/font-awesome.min.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/magnific-popup.css">
+    <!-- IcoFont Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/icofont.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/owl.carousel.min.css">
+    <!-- Classy Nav Min CSS-->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/classy-nav.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/style.css">
+    <!-- Responsive Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/responsive.css">
+    <!-- Color Default CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/color/color-default.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKNC8VH07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMKNC8VH07');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Start Preloader Area -->
+    <div id="preloader-area">
+        <div class="loader">
+            <div id="largeBox"></div>
+            <div id="smallBox"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Main Menu Area -->
+    <div class="main-header-area header-sticky">
+        <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="eduNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/">
+                                        <span>Clash机场</span>
+                                        </a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Menu Area -->
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h1>JavaScript相邻元素平均值的数组方法详解</h1>
+                            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li>/</li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>/</li>
+                                <li>正文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <!-- Start About Area -->
+    <section class="about-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>假设我们有一个数字数组-</p> <pre>const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&nbsp;2,&nbsp;8,&nbsp;4,&nbsp;2,&nbsp;1];</pre> <p>我们需要编写一个函数，该函数返回一个数组，该数组包含对应元素及其前任元素的平均值。对于第一个元素，因为没有前任，所以应该返回非常元素。</p> <p>让我们为该函数编写代码，我们将使用Array.prototype.map()函数解决此问题-</p> <h2>示例</h2> <pre>const&nbsp;arr&nbsp;=&nbsp;[3,&nbsp;5,&nbsp;7,&nbsp;8,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;4,&nbsp;2,&nbsp;8,&nbsp;4,&nbsp;2,&nbsp;1]; const&nbsp;consecutiveAverage&nbsp;=&nbsp;arr&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;return&nbsp;arr.map((el,&nbsp;ind,&nbsp;array)&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;first&nbsp;=&nbsp;(array[ind-1]&nbsp;||&nbsp;0); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;second&nbsp;=&nbsp;(1&nbsp;+&nbsp;!!ind); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;((el&nbsp;+&nbsp;first)&nbsp;/&nbsp;second); &nbsp;&nbsp;&nbsp;}); }; console.log(consecutiveAverage(arr));</pre> <p>输出结果</p> <p>这将在控制台中产生以下输出-</p> <pre>[ &nbsp;&nbsp;&nbsp;3,&nbsp;&nbsp;&nbsp;4,&nbsp;6,&nbsp;7.5,&nbsp;5.5,&nbsp;4, &nbsp;&nbsp;&nbsp;6,&nbsp;5.5,&nbsp;3,&nbsp;&nbsp;&nbsp;5,&nbsp;&nbsp;&nbsp;6,&nbsp;3, &nbsp;&nbsp;&nbsp;1.5 ]</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-98454.htm">宠物领养平台国内外发展现状（宠物领养平台如何盈利）</a></p>
+                                        <p>下一个：<a href="/news/article-99222.htm">C#语法糖系列第一篇：聊聊 params 参数底层玩法</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-clash-v2ray-ss-ssr.htm" title="Clash机场 | 3月28日19.5M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享">Clash机场 | 3月28日19.5M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-99222.htm" title="C#语法糖系列第一篇：聊聊 params 参数底层玩法">C#语法糖系列第一篇：聊聊 params 参数底层玩法</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-node-share-links.htm" title="Clash机场 | 4月13日22.9M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享">Clash机场 | 4月13日22.9M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-86656.htm" title="Spark Streaming 实战 日志分析数据清洗+统计访问量">Spark Streaming 实战 日志分析数据清洗+统计访问量</a></li>
+                        <li class="py-2"><a href="/news/article-76863.htm" title="Java Arrays工具类的使用">Java Arrays工具类的使用</a></li>
+                        <li class="py-2"><a href="/news/article-70843.htm" title="有没有收狗的平台（哪有收狗的电话）">有没有收狗的平台（哪有收狗的电话）</a></li>
+                        <li class="py-2"><a href="/news/article-70214.htm" title="长沙市宠物领养中心在哪里 长沙市宠物领养中心在哪里啊">长沙市宠物领养中心在哪里 长沙市宠物领养中心在哪里啊</a></li>
+                        <li class="py-2"><a href="/news/article-93279.htm" title="简历准备及面试技巧，你应该知道的一切">简历准备及面试技巧，你应该知道的一切</a></li>
+                        <li class="py-2"><a href="/news/article-98454.htm" title="宠物领养平台国内外发展现状（宠物领养平台如何盈利）">宠物领养平台国内外发展现状（宠物领养平台如何盈利）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-node-share-links.htm" title="Clash机场 | 3月7日18.3M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">Clash机场 | 3月7日18.3M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">55</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+    <!-- Start Footer Area -->
+<footer class="footer-area ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+<div class="go-top"><i class="fa fa-angle-up"></i></div>
+<!-- jQuery Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery-min.js"></script>
+<!-- Prpper JS -->
+<script src="/assets/website/js/frontend/freematsuri/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/bootstrap.min.js"></script>
+<!-- Jquery Magnific Popup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.magnific-popup.min.js"></script>
+<!-- Jquery Mixitup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.mixitup.min.js"></script>
+<!-- Owl Carousel Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/owl.carousel.min.js"></script>
+<!-- Jquery CounterUp Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.counterup.min.js"></script>
+<!-- Waypoints Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/waypoints.min.js"></script>
+<!-- Wow Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/wow.min.js"></script>
+<!-- Classy Nav Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/classy-nav.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/contact-form-script.js"></script>
+<!-- Main JS -->
+<script src="/assets/website/js/frontend/freematsuri/main.js"></script>
+<script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+<script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
