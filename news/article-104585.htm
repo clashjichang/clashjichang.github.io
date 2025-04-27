@@ -1,0 +1,254 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashjichang.github.io/news/article-104585.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Java 带参数与带返回值的方法的定义和调用_java_</title>
+        <meta name="description" content="目录  带参数方法的定义和调用  形参和实参 带参数方法练习  带返回值的方法的定义和调用  带返回值的方法定义 带返回值的方法调用     带参数方法的定义和调用  形参和实参 形参：方法定义中的参" />
+        <link rel="icon" href="/assets/website/img/freematsuri/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Clash机场 免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashjichang.github.io/news/article-104585.htm" />
+    <meta property="og:site_name" content="Clash机场 免费节点订阅官网" />
+    <meta property="og:title" content="Java 带参数与带返回值的方法的定义和调用_java_" />
+    <meta property="og:image" content="https://clashjichang.github.io/uploads/20241222/87910646c8371a449081c9d6a6f46428.webp" />
+        <meta property="og:release_date" content="2025-04-26T07:39:12" />
+    <meta property="og:updated_time" content="2025-04-26T07:39:12" />
+        <meta property="og:description" content="目录  带参数方法的定义和调用  形参和实参 带参数方法练习  带返回值的方法的定义和调用  带返回值的方法定义 带返回值的方法调用     带参数方法的定义和调用  形参和实参 形参：方法定义中的参" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java 带参数与带返回值的方法的定义和调用_java_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/animate.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/font-awesome.min.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/magnific-popup.css">
+    <!-- IcoFont Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/icofont.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/owl.carousel.min.css">
+    <!-- Classy Nav Min CSS-->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/classy-nav.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/style.css">
+    <!-- Responsive Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/responsive.css">
+    <!-- Color Default CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/color/color-default.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKNC8VH07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMKNC8VH07');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Start Preloader Area -->
+    <div id="preloader-area">
+        <div class="loader">
+            <div id="largeBox"></div>
+            <div id="smallBox"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Main Menu Area -->
+    <div class="main-header-area header-sticky">
+        <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="eduNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/">
+                                        <span>Clash机场</span>
+                                        </a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Menu Area -->
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h1>Java 带参数与带返回值的方法的定义和调用_java_</h1>
+                            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li>/</li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>/</li>
+                                <li>正文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <!-- Start About Area -->
+    <section class="about-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li>带参数方法的定义和调用</li> <ul class="second_class_ul"> <li>形参和实参</li> <li>带参数方法练习</li> </ul> <li>带返回值的方法的定义和调用</li> <ul class="second_class_ul"> <li>带返回值的方法定义</li> <li>带返回值的方法调用</li> </ul> </ul> </div> <p class="maodian"></p> <h2>带参数方法的定义和调用</h2> <p class="maodian"></p> <h3>形参和实参</h3> <p>形参：方法定义中的参数</p> <p>           相当于变量定义格式，例int number</p> <p>实参：方法调用中参数</p> <p>           等同于变量或常量，例如10   ， number</p> <p class="maodian"></p> <h3>带参数方法练习</h3> <p>需求： 设计一个方法用于打印两个数中最大数，数据来自于方法参数</p> <p>思路：</p> <p>1.定义一个方法,用于打印两个书中的最大数,例如getMax()</p> <div class="ay1code"> <pre class="brush:java;">public static void getMax( ){  }</pre> </div> <p>2.为方法定义两个参数，用于接收数据</p> <div class="ay1code"> <pre class="brush:java;">public static void getMax(int a,int b){  }</pre> </div> <p>3.使用分支语句分两种情况对数字的大小关系进行处理；</p> <div class="ay1code"> <pre class="brush:java;">if (a&gt;b){            system.out.println(a);  }else{            system.out.printf(b);</pre> </div> <p>4.在main方法中调用定义好的方法（使用常量）</p> <div class="ay1code"> <pre class="brush:java;">public static void main（String[ ] args）{  //直接传递常量            getMax（10,20）；  }</pre> </div> <p>5.在main方法中调用定义好的方法（使用变量）</p> <div class="ay1code"> <pre class="brush:java;">public static void main（String[ ] args）{  //定义变量，传递          int a=10；          int b=20；          getMax（a,b）;  }</pre> </div> <p>代码示例：</p> <div class="ay1code"> <pre class="brush:java;">public static void main(String[] args) {  		// TODO Auto-generated method stub  		getMax(10, 20);//使用常量  		int a=10;  		int b=20;  		getMax(a, b);//使用变量  	}     	public static void getMax(int a,int b){  		if (a&gt;b){  			System.out.println(a);  		}else{  			System.out.println(b);  		}  	}</pre> </div> <p class="maodian"></p> <h2>带返回值的方法的定义和调用</h2> <p class="maodian"></p> <h3>带返回值的方法定义</h3> <p>格式：</p> <blockquote> <p>public static 数据类型       方法名（参数）{<!-- --></p> <p>           return 数据;</p> <p>}</p> </blockquote> <p>范例：</p> <blockquote> <p>public static boolean isEvenNumber（int number）{<!-- --></p> <p>              return true;</p> <p>}</p> </blockquote> <p>范例2：</p> <blockquote> <p>public static int getMax（int a，int b）{<!-- --></p> <p>             return 100；    </p> <p> }</p> </blockquote> <p>注意：方法定义时return 后面的返回值与方法定义上的数据类型相匹配，否则程序报错</p> <p class="maodian"></p> <h3>带返回值的方法调用</h3> <p>格式：</p> <blockquote> <p>方法名（参数）；</p> </blockquote> <p>范例：</p> <blockquote> <p>isEvenNumber(5);</p> </blockquote> <p>格式2：</p> <blockquote> <p>数据类型  变量名  =  方法名（参数）；</p> </blockquote> <p>范例：</p> <blockquote> <p>boolean   Number   =  isEvennumber（5）；</p> </blockquote> <p>注意：</p> <p>方法的返回值通常会使用变量接收，否则该返回值将无意义</p> <p>示例代码：定义一个方法，该方法接收一个参数，判断该数据是否为偶数，并返回true or false</p> <div class="ay1code"> <pre class="brush:java;">public static void main(String[] args) {  		//数据类型 变量名 = 方法名(参数)  		boolean flag= isEvenNumber(10);  		System.out.println(flag);  	}  	public static boolean isEvenNumber(int number) {  		if(number%2==0){  			return true;  		}else{  			return false;  		}  	}</pre> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104582.htm">win11系统怎么关闭自动锁屏</a></p>
+                                        <p>下一个：<a href="/news/article-105360.htm">vue自定义指令实现拖拽</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-71513.htm" title="【UWP】实现一个波浪进度条">【UWP】实现一个波浪进度条</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-26-node-share.htm" title="Clash机场 | 4月26日20.3M/S|免费V2ray/SSR/Shadowrocket/Clash订阅节点分享">Clash机场 | 4月26日20.3M/S|免费V2ray/SSR/Shadowrocket/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-clash-v2ray-ss-ssr.htm" title="Clash机场 | 3月27日20M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">Clash机场 | 3月27日20M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-88101.htm" title="宠物店养猫一个月多少钱 宠物店养猫一个月多少钱啊">宠物店养猫一个月多少钱 宠物店养猫一个月多少钱啊</a></li>
+                        <li class="py-2"><a href="/news/article-103733.htm" title="打过疫苗的猫轻微抓伤有一点渗血要***吗（打过疫苗的猫咪抓破了一点点皮出血要打疫苗吗）">打过疫苗的猫轻微抓伤有一点渗血要***吗（打过疫苗的猫咪抓破了一点点皮出血要打疫苗吗）</a></li>
+                        <li class="py-2"><a href="/news/article-71514.htm" title="Java 使用 Maven BOM 统一管理版本号_在线工具">Java 使用 Maven BOM 统一管理版本号_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-68899.htm" title="golang bufio解析">golang bufio解析</a></li>
+                        <li class="py-2"><a href="/news/article-90875.htm" title="济南正规的宠物寄养（济南最好的宠物寄养）">济南正规的宠物寄养（济南最好的宠物寄养）</a></li>
+                        <li class="py-2"><a href="/news/article-85953.htm" title="宠物粮加工原材料有哪些 宠物粮加工原材料有哪些种类">宠物粮加工原材料有哪些 宠物粮加工原材料有哪些种类</a></li>
+                        <li class="py-2"><a href="/news/article-68677.htm" title="生物疫苗和动物疫苗的区别 生物疫苗和动物疫苗的区别是什么">生物疫苗和动物疫苗的区别 生物疫苗和动物疫苗的区别是什么</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">77</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+    <!-- Start Footer Area -->
+<footer class="footer-area ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+<div class="go-top"><i class="fa fa-angle-up"></i></div>
+<!-- jQuery Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery-min.js"></script>
+<!-- Prpper JS -->
+<script src="/assets/website/js/frontend/freematsuri/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/bootstrap.min.js"></script>
+<!-- Jquery Magnific Popup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.magnific-popup.min.js"></script>
+<!-- Jquery Mixitup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.mixitup.min.js"></script>
+<!-- Owl Carousel Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/owl.carousel.min.js"></script>
+<!-- Jquery CounterUp Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.counterup.min.js"></script>
+<!-- Waypoints Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/waypoints.min.js"></script>
+<!-- Wow Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/wow.min.js"></script>
+<!-- Classy Nav Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/classy-nav.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/contact-form-script.js"></script>
+<!-- Main JS -->
+<script src="/assets/website/js/frontend/freematsuri/main.js"></script>
+<script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+<script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
