@@ -1,0 +1,254 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashjichang.github.io/news/article-107134.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SpringBoot-动态定时任务调度</title>
+        <meta name="description" content="一、业务场景  先说业务场景，根据用户输入的cron表达式进行定时调度，举个例子：如图   根据用户输入的参数，生成表达式，然后定时去执行相应的业务逻辑。  二、Controller层（不是重点）  " />
+        <link rel="icon" href="/assets/website/img/freematsuri/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Clash机场 免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashjichang.github.io/news/article-107134.htm" />
+    <meta property="og:site_name" content="Clash机场 免费节点订阅官网" />
+    <meta property="og:title" content="SpringBoot-动态定时任务调度" />
+    <meta property="og:image" content="https://clashjichang.github.io/uploads/20241222/caaba8547d2729491fea17301c87e8fc.webp" />
+        <meta property="og:release_date" content="2025-04-29T08:02:39" />
+    <meta property="og:updated_time" content="2025-04-29T08:02:39" />
+        <meta property="og:description" content="一、业务场景  先说业务场景，根据用户输入的cron表达式进行定时调度，举个例子：如图   根据用户输入的参数，生成表达式，然后定时去执行相应的业务逻辑。  二、Controller层（不是重点）  " />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringBoot-动态定时任务调度">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/animate.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/font-awesome.min.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/magnific-popup.css">
+    <!-- IcoFont Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/icofont.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/owl.carousel.min.css">
+    <!-- Classy Nav Min CSS-->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/classy-nav.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/style.css">
+    <!-- Responsive Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/responsive.css">
+    <!-- Color Default CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/color/color-default.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKNC8VH07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMKNC8VH07');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Start Preloader Area -->
+    <div id="preloader-area">
+        <div class="loader">
+            <div id="largeBox"></div>
+            <div id="smallBox"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Main Menu Area -->
+    <div class="main-header-area header-sticky">
+        <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="eduNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/">
+                                        <span>Clash机场</span>
+                                        </a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Menu Area -->
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h1>SpringBoot-动态定时任务调度</h1>
+                            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li>/</li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>/</li>
+                                <li>正文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <!-- Start About Area -->
+    <section class="about-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <h2> 一、业务场景</h2> <blockquote> <p>先说业务场景，根据用户输入的cron表达式进行定时调度，举个例子：如图</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/ac7da3abd349024272ef2587aebd0527.jpg" alt="SpringBoot-动态定时任务调度"></p> <p>根据用户输入的参数，生成表达式，然后定时去执行相应的业务逻辑。</p> <h2> 二、Controller层（不是重点）</h2> <h3> domain类</h3> <pre><code class="prism language-java"><span class="token annotation punctuation">@TableName</span><span class="token punctuation">(</span><span class="token string">"sys_schedule"</span><span class="token punctuation">)</span> <span class="token annotation punctuation">@Data</span> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Schedule</span> <span class="token punctuation">{<!-- --></span>      <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> serialVersionUID <span class="token operator">=</span> <span class="token number">1</span>L<span class="token punctuation">;</span>      <span class="token comment">/**      * 主键ID      */</span>     <span class="token annotation punctuation">@TableId</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">,</span> type <span class="token operator">=</span> IdType<span class="token punctuation">.</span>AUTO<span class="token punctuation">)</span>     <span class="token keyword">private</span> Long id<span class="token punctuation">;</span>      <span class="token comment">/**      * 类型: 时间， 周， 日      */</span>     <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"type"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> Integer type<span class="token punctuation">;</span>      <span class="token comment">/**      * time 时间      */</span>     <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"day_time"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> String dayTime<span class="token punctuation">;</span>      <span class="token comment">/**      * time 周      */</span>     <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"weekday"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> String weekday<span class="token punctuation">;</span>      <span class="token comment">/**      * time 日      */</span>     <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"monthday"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> String monthday<span class="token punctuation">;</span>      <span class="token comment">/**      * 选中状态      */</span>     <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"status"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> Integer status<span class="token punctuation">;</span>      <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span><span class="token string">"cron"</span><span class="token punctuation">)</span>     <span class="token keyword">private</span> String cron<span class="token punctuation">;</span>      <span class="token annotation punctuation">@Override</span>     <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">return</span> <span class="token string">"Schedule{"</span> <span class="token operator">+</span>                 <span class="token string">"id="</span> <span class="token operator">+</span> id <span class="token operator">+</span>                 <span class="token string">", type="</span> <span class="token operator">+</span> type <span class="token operator">+</span>                 <span class="token string">", dayTime='"</span> <span class="token operator">+</span> dayTime <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>                 <span class="token string">", weekday='"</span> <span class="token operator">+</span> weekday <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>                 <span class="token string">", monthday='"</span> <span class="token operator">+</span> monthday <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>                 <span class="token string">", status="</span> <span class="token operator">+</span> status <span class="token operator">+</span>                 <span class="token string">", cron='"</span> <span class="token operator">+</span> cron <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>                 <span class="token string">'}'</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <h3> controller方法</h3> <pre><code class="prism language-java">	 	<span class="token annotation punctuation">@Autowired</span>     <span class="token keyword">private</span> ScheduleService scheduleService<span class="token punctuation">;</span> 	  	<span class="token annotation punctuation">@PutMapping</span><span class="token punctuation">(</span><span class="token string">"/editItem"</span><span class="token punctuation">)</span>     <span class="token annotation punctuation">@ResponseBody</span>     <span class="token keyword">public</span> ResponseData <span class="token function">editItem</span><span class="token punctuation">(</span>Schedule schedule<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token comment">//ResponseData自己封装的响应结果</span>         <span class="token comment">//param是你前端传的，包含你的数据，如cron表达式</span>         <span class="token keyword">this</span><span class="token punctuation">.</span>scheduleService<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>schedule<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">return</span> ResponseData<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span> </code></pre> <h2> 三、Service层</h2> <h3> 接口层</h3> <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ScheduleService</span> <span class="token punctuation">{<!-- --></span>      <span class="token comment">/**      * 更新      * @Date 2020-12-25      */</span>     <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>Schedule param<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">/**      * 业务处理      * @Date 2020-12-25      */</span>     <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span> </code></pre> <h3> 实现层</h3> <pre><code class="prism language-java"><span class="token annotation punctuation">@Service</span> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ScheduleServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">ScheduleService</span> <span class="token punctuation">{<!-- --></span>      	<span class="token annotation punctuation">@Override</span>     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>Schedule param<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 		<span class="token comment">//这里简化了我自己的业务逻辑代码，根据公司自己需要来写即可</span>         <span class="token comment">//业务逻辑代码</span>                  <span class="token comment">//思路就是：更新数据库的cron，类型等值，然后交给下面的定时工具类走定时方法</span>         <span class="token keyword">this</span><span class="token punctuation">.</span>scheduleMapper<span class="token punctuation">.</span><span class="token function">updateById</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">;</span>         String cron <span class="token operator">=</span> param<span class="token punctuation">.</span><span class="token function">getCron</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//this就是你的业务执行service, 这里就是scheduleService</span>         ScheduleUtil<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ScheduleTask</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">,</span> cron<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span>          <span class="token annotation punctuation">@Override</span>     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token comment">//抓取数据的代码</span>         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"业务代码执行。。。"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span>       <span class="token punctuation">}</span> 	 </code></pre> <h2> 四、定时工具类</h2> <pre><code class="prism language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>scheduling<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>ThreadPoolTaskScheduler<span class="token punctuation">;</span> <span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>scheduling<span class="token punctuation">.</span>support<span class="token punctuation">.</span>CronTrigger<span class="token punctuation">;</span>  <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashMap<span class="token punctuation">;</span> <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Map<span class="token punctuation">;</span> <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>ScheduledFuture<span class="token punctuation">;</span>  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ScheduleUtil</span> <span class="token punctuation">{<!-- --></span>      <span class="token keyword">private</span> <span class="token keyword">static</span> ThreadPoolTaskScheduler threadPoolTaskScheduler <span class="token operator">=</span> <span class="token keyword">new</span> 			<span class="token class-name">ThreadPoolTaskScheduler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token keyword">private</span> <span class="token keyword">static</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> ScheduledFuture<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">&gt;&gt;</span> scheduledFutureMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token keyword">static</span> <span class="token punctuation">{<!-- --></span>         threadPoolTaskScheduler<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"定时任务线程池启动"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span>      <span class="token comment">/**      * 启动      *      * @param scheduleTask 定时任务      * @param corn         执行时间表达式      */</span>     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">start</span><span class="token punctuation">(</span>ScheduleTask scheduleTask<span class="token punctuation">,</span> String corn<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"启动定时任务线程 taskId "</span> <span class="token operator">+</span> scheduleTask<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         ScheduledFuture<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">&gt;</span> scheduledFuture <span class="token operator">=</span> threadPoolTaskScheduler                 <span class="token punctuation">.</span><span class="token function">schedule</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">CronTrigger</span><span class="token punctuation">(</span>corn<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         scheduledFutureMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> scheduledFuture<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span>      <span class="token comment">/**      * 取消      *      * @param scheduleTask 定时任务      */</span>     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">cancel</span><span class="token punctuation">(</span>ScheduleTask scheduleTask<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"关闭定时任务线程 taskId "</span> <span class="token operator">+</span> scheduleTask<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         ScheduledFuture<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">&gt;</span> scheduledFuture <span class="token operator">=</span> 			 	 scheduledFutureMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">if</span> <span class="token punctuation">(</span>scheduledFuture <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>scheduledFuture<span class="token punctuation">.</span><span class="token function">isCancelled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             scheduledFuture<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span>         scheduledFutureMap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span>      <span class="token comment">/**      * 修改      *      * @param scheduleTask 定时任务      * @param corn         执行时间表达式      */</span>     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">reset</span><span class="token punctuation">(</span>ScheduleTask scheduleTask<span class="token punctuation">,</span> String corn<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token comment">//先取消定时任务</span>         <span class="token function">cancel</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//然后启动新的定时任务</span>         <span class="token function">start</span><span class="token punctuation">(</span>scheduleTask<span class="token punctuation">,</span> corn<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <h2> 五、工作线程</h2> <pre><code class="prism language-java"> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ScheduleTask</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{<!-- --></span>      <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> TIMEOUT <span class="token operator">=</span> <span class="token number">30000</span><span class="token punctuation">;</span>      <span class="token keyword">private</span> String id<span class="token punctuation">;</span>     <span class="token keyword">private</span> ScheduleService service<span class="token punctuation">;</span>      <span class="token keyword">public</span> String <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">return</span> id<span class="token punctuation">;</span>     <span class="token punctuation">}</span>      <span class="token comment">/**      * @param id      任务ID      * @param service 业务类      * @param keyword 关键字参数      */</span>     <span class="token keyword">public</span> <span class="token function">ScheduleTask</span><span class="token punctuation">(</span>String id<span class="token punctuation">,</span> ScheduleService service<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>         <span class="token keyword">this</span><span class="token punctuation">.</span>service <span class="token operator">=</span> service<span class="token punctuation">;</span>     <span class="token punctuation">}</span>      <span class="token annotation punctuation">@Override</span>     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token comment">//你自己的业务逻辑</span>         service<span class="token punctuation">.</span><span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <p>到这里结束了，这里主要是根据前台传的时间，进行生成cron，入库，执行定时任务。但是有一个问题，就是如果项目重启了的话，那么定时类那是无法加载到cron表达式的。那么接下来，加一个项目启动时，把数据库里的cron表达式重新灌入到定时类就可以。代码如下：</p> <pre><code class="prism language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Autowired<span class="token punctuation">;</span> <span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>CommandLineRunner<span class="token punctuation">;</span> <span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>core<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Order<span class="token punctuation">;</span> <span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Component<span class="token punctuation">;</span>  <span class="token comment">/**  * 项目启动时，加载  * @Date: 2020/12/25:16:00  **/</span> <span class="token annotation punctuation">@Component</span> <span class="token annotation punctuation">@Order</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">initLineRunner</span> <span class="token keyword">implements</span> <span class="token class-name">CommandLineRunner</span> <span class="token punctuation">{<!-- --></span>      <span class="token annotation punctuation">@Autowired</span>     <span class="token keyword">private</span> ScheduleService scheduleService<span class="token punctuation">;</span>      <span class="token annotation punctuation">@Override</span>     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span>String<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{<!-- --></span>         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"init ........... "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//这里就是获取你数据库里的那个cron表达式</span>         Schedule param <span class="token operator">=</span> scheduleService<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         String cron <span class="token operator">=</span> param<span class="token punctuation">.</span><span class="token function">getCron</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         ScheduleUtil<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ScheduleTask</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> scheduleService<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">,</span> cron<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <p>参考文章：https://blog.csdn.net/qq_37334435/article/details/107996095</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-106194.htm">动物预防针多少钱一针打（动物防疫***收费吗）</a></p>
+                                        <p>下一个：<a href="/news/article-107135.htm">宠物粮食生产厂家一年能盈利多少亿元（宠物粮食加工厂好做吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-86656.htm" title="Spark Streaming 实战 日志分析数据清洗+统计访问量">Spark Streaming 实战 日志分析数据清洗+统计访问量</a></li>
+                        <li class="py-2"><a href="/news/article-102967.htm" title="哪里有免费给狗狗打疫苗的地方嘉兴星期天可以打吗（嘉兴狗场在什么地方）">哪里有免费给狗狗打疫苗的地方嘉兴星期天可以打吗（嘉兴狗场在什么地方）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-24-free-high-speed-nodes.htm" title="Clash机场 | 4月24日21.9M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享">Clash机场 | 4月24日21.9M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-102968.htm" title="公务员国考考试报名时间（公务员国考考试报名时间）">公务员国考考试报名时间（公务员国考考试报名时间）</a></li>
+                        <li class="py-2"><a href="/news/article-91809.htm" title="哪有免费领养宠物的（在哪免费领养宠物）">哪有免费领养宠物的（在哪免费领养宠物）</a></li>
+                        <li class="py-2"><a href="/news/article-101376.htm" title="中国动物疫苗十强上市公司有哪些（中国动物疫苗生产企业排名）">中国动物疫苗十强上市公司有哪些（中国动物疫苗生产企业排名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-23-clash-v2ray-ss-ssr.htm" title="Clash机场 | 4月23日19.8M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点分享">Clash机场 | 4月23日19.8M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-node-share-links.htm" title="Clash机场 | 4月13日22.9M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享">Clash机场 | 4月13日22.9M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-108729.htm" title="厦门同安宠物店一条街（同安宠物猫店）">厦门同安宠物店一条街（同安宠物猫店）</a></li>
+                        <li class="py-2"><a href="/news/article-88820.htm" title="领养宠物店的流浪狗要什么手续（领养流浪猫狗要钱吗）">领养宠物店的流浪狗要什么手续（领养流浪猫狗要钱吗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+    <!-- Start Footer Area -->
+<footer class="footer-area ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+<div class="go-top"><i class="fa fa-angle-up"></i></div>
+<!-- jQuery Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery-min.js"></script>
+<!-- Prpper JS -->
+<script src="/assets/website/js/frontend/freematsuri/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/bootstrap.min.js"></script>
+<!-- Jquery Magnific Popup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.magnific-popup.min.js"></script>
+<!-- Jquery Mixitup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.mixitup.min.js"></script>
+<!-- Owl Carousel Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/owl.carousel.min.js"></script>
+<!-- Jquery CounterUp Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.counterup.min.js"></script>
+<!-- Waypoints Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/waypoints.min.js"></script>
+<!-- Wow Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/wow.min.js"></script>
+<!-- Classy Nav Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/classy-nav.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/contact-form-script.js"></script>
+<!-- Main JS -->
+<script src="/assets/website/js/frontend/freematsuri/main.js"></script>
+<script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+<script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
