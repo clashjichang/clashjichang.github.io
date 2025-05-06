@@ -1,0 +1,254 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashjichang.github.io/news/article-111266.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>杨氏矩阵详解</title>
+        <meta name="description" content="题目名称： 杨氏矩阵 题目内容： 有一个数字矩阵，矩阵的每行从左到右是递增的，矩阵从上到下是递增的，请编写程序在这样的矩阵中查找某个数字是否存在。 要求：时间复杂度小于O(N);  &nbsp; 思路" />
+        <link rel="icon" href="/assets/website/img/freematsuri/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Clash机场 免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashjichang.github.io/news/article-111266.htm" />
+    <meta property="og:site_name" content="Clash机场 免费节点订阅官网" />
+    <meta property="og:title" content="杨氏矩阵详解" />
+    <meta property="og:image" content="https://clashjichang.github.io/uploads/20241222/6be35bc412b3e061c7f34fcf477d647f.webp" />
+        <meta property="og:release_date" content="2025-05-04T09:27:42" />
+    <meta property="og:updated_time" content="2025-05-04T09:27:42" />
+        <meta property="og:description" content="题目名称： 杨氏矩阵 题目内容： 有一个数字矩阵，矩阵的每行从左到右是递增的，矩阵从上到下是递增的，请编写程序在这样的矩阵中查找某个数字是否存在。 要求：时间复杂度小于O(N);  &nbsp; 思路" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="杨氏矩阵详解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+        
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/animate.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/font-awesome.min.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/magnific-popup.css">
+    <!-- IcoFont Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/icofont.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/owl.carousel.min.css">
+    <!-- Classy Nav Min CSS-->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/classy-nav.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/style.css">
+    <!-- Responsive Min CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/responsive.css">
+    <!-- Color Default CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freematsuri/color/color-default.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKNC8VH07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMKNC8VH07');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Start Preloader Area -->
+    <div id="preloader-area">
+        <div class="loader">
+            <div id="largeBox"></div>
+            <div id="smallBox"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Main Menu Area -->
+    <div class="main-header-area header-sticky">
+        <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="eduNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/">
+                                        <span>Clash机场</span>
+                                        </a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Menu Area -->
+    <!-- Start Page Title Area -->
+    <div class="page-title">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <h1>杨氏矩阵详解</h1>
+                            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li>/</li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li>/</li>
+                                <li>正文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <!-- Start About Area -->
+    <section class="about-area ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <blockquote> <p>题目名称：</p> <p>杨氏矩阵</p> <p>题目内容：</p> <p>有一个数字矩阵，矩阵的每行从左到右是递增的，矩阵从上到下是递增的，请编写程序在这样的矩阵中查找某个数字是否存在。</p> <p>要求：时间复杂度小于O(N);</p> </blockquote> <p>&nbsp;</p> <p>思路一： 数组行列递增，是有规律的，所以可以遍历数组寻找数字，但是这题有时间复杂度的要求，遍历数组时间复杂度是O(N*2)，不满足题意。</p> <p>思路二： 如图所示，矩阵右上角的数字5是它这一行里最大的，是它这一列里的最小的。</p> <p>矩阵左下角的数字21是它这一行里最小的，是它这一列里的最大的。</p> <p><img fetchpriority="high" decoding="async" alt="" height="200" src="http://img.555519.xyz/uploads/20230202/3b0665dbf8639522fcc920e9af7a2169.jpg"></p> <p>&nbsp;借助这个结论，可以发现，比如要找数字7，它比右上角的数字5大，所以可以排除第一行；比如要找数字23，它比左下角的21大，所以可以排除第一列。</p> <p>代码如下：</p> <pre><code class="language-cpp">int search(int arr[3][3], int r, int c, int k) { 	int x = 0; 	int y = c - 1; 	while (x &lt; r &amp;&amp; c &gt;= 0) 	{ 		if (k &gt; arr[x][y]) 			x++; 		else if (k &lt; arr[x][y]) 			y--; 		else 			return 1; 	} 	return 0; } int main() { 	int arr[3][3] = {1,2,3,4,5,6,7,8,9}; 	int k = 0; 	scanf("%d", &amp;k); 	int ret = search(arr,3,3, k); 	if (ret == 1) 		printf("YES\n"); 	else 		printf("NO\n"); 	return 0; }</code></pre> <p>&nbsp;</p> <p>&nbsp;</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-110433.htm">动物打完疫苗需要注意什么（动物打完疫苗可以洗澡吗）</a></p>
+                                        <p>下一个：<a href="/news/article-111267.htm">成年猫打几针（成年猫打几针疫苗可以绝育）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-109593.htm" title="动物疫苗的使用方法视频教学大全（动物疫苗接种方法）">动物疫苗的使用方法视频教学大全（动物疫苗接种方法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-12-free-subscribe-node.htm" title="Clash机场 | 4月12日22.7M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">Clash机场 | 4月12日22.7M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-90874.htm" title="消息队列与快递柜之间的奇妙关系">消息队列与快递柜之间的奇妙关系</a></li>
+                        <li class="py-2"><a href="/news/article-90315.htm" title="安安宠物医院有限公司（安安宠物医院官网）">安安宠物医院有限公司（安安宠物医院官网）</a></li>
+                        <li class="py-2"><a href="/news/article-107907.htm" title="动物防疫站打狂犬疫苗要钱吗（动物疾病预防中心可以打狂犬疫苗吗）">动物防疫站打狂犬疫苗要钱吗（动物疾病预防中心可以打狂犬疫苗吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-6-free-v2ray.htm" title="Clash机场 | 4月6日18.9M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">Clash机场 | 4月6日18.9M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-86657.htm" title="数据结构与算法知识点总结（3）树、图与并查集">数据结构与算法知识点总结（3）树、图与并查集</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-5-6-free-subscribe-node.htm" title="Clash机场 | 5月6日21.9M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享">Clash机场 | 5月6日21.9M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-96293.htm" title="学兽医去哪里学比较好（兽医证可以自考自学吗）">学兽医去哪里学比较好（兽医证可以自考自学吗）</a></li>
+                        <li class="py-2"><a href="/news/article-85952.htm" title="纯JS 全屏滚动 / 整屏翻页">纯JS 全屏滚动 / 整屏翻页</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+    <!-- Start Footer Area -->
+<footer class="footer-area ptb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+<div class="go-top"><i class="fa fa-angle-up"></i></div>
+<!-- jQuery Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery-min.js"></script>
+<!-- Prpper JS -->
+<script src="/assets/website/js/frontend/freematsuri/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/bootstrap.min.js"></script>
+<!-- Jquery Magnific Popup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.magnific-popup.min.js"></script>
+<!-- Jquery Mixitup Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.mixitup.min.js"></script>
+<!-- Owl Carousel Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/owl.carousel.min.js"></script>
+<!-- Jquery CounterUp Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/jquery.counterup.min.js"></script>
+<!-- Waypoints Min Js -->
+<script src="/assets/website/js/frontend/freematsuri/waypoints.min.js"></script>
+<!-- Wow Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/wow.min.js"></script>
+<!-- Classy Nav Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/classy-nav.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="/assets/website/js/frontend/freematsuri/contact-form-script.js"></script>
+<!-- Main JS -->
+<script src="/assets/website/js/frontend/freematsuri/main.js"></script>
+<script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+<script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
