@@ -1,4 +1,4 @@
-# Clash机场 | 5月21日18.6M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享  更新时间 2025-05-21 08:21:01
+# Clash机场 | 5月25日22.6M/S|免费V2ray/SSR/Shadowrocket/Clash订阅节点分享  更新时间 2025-05-25 09:38:34
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashjichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://clashjichang.github.io/uploads/2025/05/0-20250521.yaml
-- https://clashjichang.github.io/uploads/2025/05/1-20250521.yaml
-- https://clashjichang.github.io/uploads/2025/05/2-20250521.yaml
-- https://clashjichang.github.io/uploads/2025/05/3-20250521.yaml
-- https://clashjichang.github.io/uploads/2025/05/4-20250521.yaml
+- https://clashjichang.github.io/uploads/2025/05/0-20250525.yaml
+- https://clashjichang.github.io/uploads/2025/05/1-20250525.yaml
+- https://clashjichang.github.io/uploads/2025/05/2-20250525.yaml
+- https://clashjichang.github.io/uploads/2025/05/3-20250525.yaml
+- https://clashjichang.github.io/uploads/2025/05/4-20250525.yaml
 
 ### V2ray订阅链接
 
-- https://clashjichang.github.io/uploads/2025/05/0-20250521.txt
-- https://clashjichang.github.io/uploads/2025/05/1-20250521.txt
-- https://clashjichang.github.io/uploads/2025/05/2-20250521.txt
-- https://clashjichang.github.io/uploads/2025/05/3-20250521.txt
-- https://clashjichang.github.io/uploads/2025/05/4-20250521.txt
+- https://clashjichang.github.io/uploads/2025/05/0-20250525.txt
+- https://clashjichang.github.io/uploads/2025/05/1-20250525.txt
+- https://clashjichang.github.io/uploads/2025/05/2-20250525.txt
+- https://clashjichang.github.io/uploads/2025/05/3-20250525.txt
+- https://clashjichang.github.io/uploads/2025/05/4-20250525.txt
 
 ### Sing-box订阅链接
 
-- https://clashjichang.github.io/uploads/2025/05/20250521.json
+- https://clashjichang.github.io/uploads/2025/05/20250525.json
 
 ## 更多clash节点订阅 ：
 
