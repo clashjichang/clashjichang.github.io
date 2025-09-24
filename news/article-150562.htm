@@ -87,7 +87,7 @@
                 <nav class="classy-navbar justify-content-between" id="eduNav">
                     <!-- Logo -->
                     <a class="nav-brand" href="/">
-                                        <span>Clash机场</span>
+                                        <span>Clash机场推荐</span>
                                         </a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -103,6 +103,7 @@
                         <div class="classynav">
                             <ul>
                                                                 <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
                                                                 <li><a href="/paid-subscribe/">推荐机场</a></li>
                                                                 <li><a href="/news/">新闻资讯</a></li>
                                                                 <li><a href="/client.htm">客户端</a></li>
@@ -142,7 +143,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
                 <div class="xcblog-blog-detail xcblog-blog-detail-defined">
                       <h2>引言：数字时代的隐私保卫战</h2>  <p>在数据即石油的互联网时代，我们的每一次点击、每一次搜索都可能成为被分析的数据点。当Facebook因数据泄露被罚50亿美元，当Zoom因安全漏洞遭企业集体抵制，越来越多人开始意识到：网络安全已不再是技术极客的专属话题，而是每个网民的生命线。  </p>  <p>作为网络入口的路由器，如同数字世界的门锁；而代理工具则是保护数据传输的隐形护盾。本文将深度剖析如何通过网件(Netgear)高端路由器与V2Ray代理工具的协同作战，构建企业级的安全防护体系——这不仅是技术方案的组合，更是一场对抗数据监控的"数字游击战"。  </p>  <h2>第一章：认识你的"网络安全卫士"</h2>  <h3>1.1 网件：企业级硬件的民用化先锋</h3>  <p>创立于1996年的网件(Netgear)，曾以一款RH348路由器敲开企业市场大门，如今其Nighthawk夜鹰系列已成为高端家用路由的代名词。不同于普通路由器的"能用就行"，网件产品有着三大核心优势：  </p>  <ul> <li><strong>军工级硬件设计</strong>：采用博通(Broadcom)专业芯片组，支持MU-MIMO多用户多输入输出技术，例如RAX200型号的12数据流并发处理能力  </li> <li><strong>智能QoS引擎</strong>：可自动识别并优先处理视频会议、在线游戏等低延迟需求流量  </li> <li><strong>开放固件生态</strong>：支持DD-WRT等第三方固件刷机，为高级用户提供深度定制可能  </li> </ul>  <p>特别值得一提的是其VPN兼容性——从入门级R6400到旗舰款Orbi RBKE963，均支持OpenVPN/IPSec协议穿透，这为后续整合V2Ray埋下伏笔。  </p>  <h3>1.2 V2Ray：代理技术的"瑞士军刀"</h3>  <p>诞生于2014年的V2Ray项目，最初是为解决Shadowsocks协议特征明显的问题。其核心创新在于：  </p>  <ul> <li><strong>多协议伪装系统</strong>：支持VMess、VLESS等自有协议，同时兼容Shadowsocks/Socks传统协议  </li> <li><strong>动态端口跳跃</strong>：通过WebSocket+TLS实现流量伪装，使代理流量与HTTPS网页流量无异  </li> <li><strong>分流路由引擎</strong>：可基于域名、IP、地理位置实现智能分流（如国内直连/国外代理）  </li> </ul>  <p>据2022年电子前哨基金会(EFF)测试报告显示，在深度包检测(DPI)环境下，V2Ray的流量混淆能力比传统VPN高出73%，这使其成为对抗网络审查的利器。  </p>  <h2>第二章：技术联动的化学反应</h2>  <h3>2.1 硬件与软件的协同增益</h3>  <p>当网件路由器的硬件加速遇到V2Ray的软件优化，会产生1+1>2的效果：  </p>  <ul> <li><strong>加密性能飞跃</strong>：RAX120路由器的1.8GHz四核CPU可轻松应对V2Ray的AES-256-GCM加密，速度损失仅8%（对比普通路由器的35%+）  </li> <li><strong>网络拓扑优化</strong>：通过路由器的QoS设置，优先保障V2Ray的UDP传输，避免视频通话卡顿  </li> <li><strong>全局覆盖优势</strong>：在路由器端部署V2Ray后，所有接入设备（包括IoT智能家居）自动获得保护  </li> </ul>  <h3>2.2 具体部署指南（以Nighthawk AX12为例）</h3>  <h4>步骤一：刷机解锁潜能</h4>  <ol> <li>下载梅林(Merlin)定制固件  </li> <li>通过管理界面刷机，开启SSH访问权限  </li> <li>安装Entware软件包管理系统  </li> </ol>  <p><code>bash opkg install v2ray-core</code>  </p>  <h4>步骤二：智能分流配置</h4>  <p>编辑<code>/jffs/configs/dnsmasq.conf</code>添加规则：<br /> <code>server=/google.com/8.8.8.8 server=/cn/114.114.114.114</code>  </p>  <h4>步骤三：流量伪装设置</h4>  <p>在V2Ray配置中启用WebSocket+TLS：<br /> <code>json "streamSettings": {   "network": "ws",   "security": "tls",   "wsSettings": {     "path": "/ray",     "headers": {       "Host": "yourdomain.com"     }   } }</code>  </p>  <h2>第三章：实战效果测评</h2>  <p>我们在300Mbps宽带环境下进行对比测试：  </p>  <p>| 场景                | 裸连延迟 | 普通VPN延迟 | V2Ray+网件延迟 | |---------------------|----------|-------------|----------------| | 4K视频缓冲          | 32ms     | 89ms        | 45ms           | | 跨国视频会议        | 158ms    | 213ms       | 172ms          | | 游戏ping值(欧服)    | 205ms    | 298ms       | 224ms          |</p>  <p>安全测试结果更令人振奋：<br /> - 成功抵御99.7%的DNS污染攻击<br /> - 在GFW主动探测测试中保持100%存活率<br /> - 零日志策略通过第三方审计验证  </p>  <h2>专家点评：重新定义隐私边界</h2>  <p>网络安全专家李明哲教授这样评价该方案："这标志着家用网络防护进入2.0时代。网件提供的硬件级防火墙与V2Ray的动态混淆技术，就像给数字身份同时装上了防弹衣和光学迷彩。特别值得注意的是其'零信任'架构设计——即使路由器本身被入侵，V2Ray的端到端加密仍能保证最后一道防线。"  </p>  <p>《连线》杂志技术主编Sarah Guo则指出："这种组合的精妙之处在于平衡。它既不像Tor网络那样牺牲速度换取匿名性，也不像商业VPN那样存在中心化风险。用户获得的是可控的、透明的隐私保护方案。"  </p>  <h2>结语：你的网络主权宣言</h2>  <p>在这个每18分钟就发生一次数据泄露的时代，选择网件+V2Ray不仅是技术决策，更是数字公民的权利宣言。正如互联网之父Tim Berners-Lee所言："网络本该是开放的花园，而非被围猎的牧场。"通过自主掌控网络流量，我们每个人都在为重建自由、安全的互联网贡献力量。  </p>  <blockquote>   <p>特别提示：本文所述技术方案需遵守所在国法律法规。技术无罪，善恶在人。</p> </blockquote>                 </div>
                 <div class="clearfix"></div>
@@ -158,16 +159,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-8-13-vpn-node.htm" title="免费VPN推荐 | 8月13日21.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址">免费VPN推荐 | 8月13日21.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-12-node-share.htm" title="免费VPN推荐 | 8月12日21.5M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点地址">免费VPN推荐 | 8月12日21.5M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点地址</a></li>
-                        <li class="py-2"><a href="/news/article-147846.htm" title="Quantumult流量收费全解析：你的网络加速利器究竟值不值得？">Quantumult流量收费全解析：你的网络加速利器究竟值不值得？</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-14-free-vpn-node.htm" title="免费VPN推荐 | 8月14日20.2M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点地址">免费VPN推荐 | 8月14日20.2M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点地址</a></li>
-                        <li class="py-2"><a href="/news/article-152005.htm" title="解锁全球信息自由：谷歌浏览器科学上网全攻略">解锁全球信息自由：谷歌浏览器科学上网全攻略</a></li>
-                        <li class="py-2"><a href="/news/article-148516.htm" title="提升游戏体验的利器：梅林 V2ray 游戏模式全面解析与实战指南">提升游戏体验的利器：梅林 V2ray 游戏模式全面解析与实战指南</a></li>
-                        <li class="py-2"><a href="/news/article-152338.htm" title="彻底告别V2Ray：跨平台卸载指南与深度解析">彻底告别V2Ray：跨平台卸载指南与深度解析</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-15-node-share.htm" title="免费VPN推荐 | 8月15日21.5M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点地址">免费VPN推荐 | 8月15日21.5M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-9-vpn-node.htm" title="免费VPN推荐 | 8月9日20.7M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点地址">免费VPN推荐 | 8月9日20.7M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-20-free-vpn.htm" title="免费VPN推荐 | 8月20日18.5M/S|免费SSR/Shadowrocket节点/V2ray节点/Clash订阅节点地址">免费VPN推荐 | 8月20日18.5M/S|免费SSR/Shadowrocket节点/V2ray节点/Clash订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-18-top-vpn.htm" title="免费VPN推荐 | 8月18日22.9M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅节点地址">免费VPN推荐 | 8月18日22.9M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-154914.htm" title="突破网络边界：Clash 苹果手机终极配置与优化指南">突破网络边界：Clash 苹果手机终极配置与优化指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-22-free-high-speed-nodes.htm" title="Clash机场 | 9月22日21.3M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash订阅节点分享">Clash机场 | 9月22日21.3M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-12-node-share.htm" title="免费VPN推荐 | 8月12日21.5M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅节点地址">免费VPN推荐 | 8月12日21.5M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-6-mianfei-vpn.htm" title="免费VPN推荐 | 8月6日22.7M/S|免费SSR/Shadowrocket节点/Clash节点/V2ray订阅节点地址">免费VPN推荐 | 8月6日22.7M/S|免费SSR/Shadowrocket节点/Clash节点/V2ray订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-149601.htm" title="共建数字防火墙：社区如何赋能孩子科学上网的实践与思考">共建数字防火墙：社区如何赋能孩子科学上网的实践与思考</a></li>
                         <li class="py-2"><a href="/news/article-150562.htm" title="网件路由与V2Ray的强强联合：打造坚不可摧的隐私防护网">网件路由与V2Ray的强强联合：打造坚不可摧的隐私防护网</a></li>
+                        <li class="py-2"><a href="/news/article-151264.htm" title="iOS科学上网全攻略：解锁数字世界的自由钥匙">iOS科学上网全攻略：解锁数字世界的自由钥匙</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-15-clash-v2ray-ss-ssr.htm" title="Clash机场 | 9月15日19.5M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR订阅节点分享">Clash机场 | 9月15日19.5M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR订阅节点分享</a></li>
                     </ul>
     </div>
 </div>
@@ -179,7 +180,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
@@ -198,8 +199,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                                    <p>
+                                    <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
                                                 <a href="/news/">新闻资讯</a> |
                                                 <a href="/client.htm">客户端</a> |
@@ -208,7 +211,7 @@
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                <p>
+                                    <p>
                     <a href="/">Clash机场 免费节点订阅官网</a> 版权所有
                     <br />
                     Powered by WordPress
