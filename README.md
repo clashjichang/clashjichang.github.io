@@ -1,4 +1,4 @@
-# Clash机场 | 9月24日18.3M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享  更新时间 2025-09-24 10:09:38
+# Clash机场 | 9月28日22.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅节点分享  更新时间 2025-09-28 08:14:21
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashjichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -7,27 +7,27 @@
 
 ## 订阅链接：
 
-### Clash订阅链接
+### 免费Clash节点订阅链接
 
-- https://clashjichang.github.io/uploads/2025/09/0-20250924.yaml
-- https://clashjichang.github.io/uploads/2025/09/1-20250924.yaml
-- https://clashjichang.github.io/uploads/2025/09/2-20250924.yaml
-- https://clashjichang.github.io/uploads/2025/09/3-20250924.yaml
-- https://clashjichang.github.io/uploads/2025/09/4-20250924.yaml
+- https://clashjichang.github.io/uploads/2025/09/0-20250928.yaml
+- https://clashjichang.github.io/uploads/2025/09/1-20250928.yaml
+- https://clashjichang.github.io/uploads/2025/09/2-20250928.yaml
+- https://clashjichang.github.io/uploads/2025/09/3-20250928.yaml
+- https://clashjichang.github.io/uploads/2025/09/4-20250928.yaml
 
-### V2ray订阅链接
+### 免费V2ray节点订阅链接
 
-- https://clashjichang.github.io/uploads/2025/09/0-20250924.txt
-- https://clashjichang.github.io/uploads/2025/09/1-20250924.txt
-- https://clashjichang.github.io/uploads/2025/09/2-20250924.txt
-- https://clashjichang.github.io/uploads/2025/09/3-20250924.txt
-- https://clashjichang.github.io/uploads/2025/09/4-20250924.txt
+- https://clashjichang.github.io/uploads/2025/09/0-20250928.txt
+- https://clashjichang.github.io/uploads/2025/09/1-20250928.txt
+- https://clashjichang.github.io/uploads/2025/09/2-20250928.txt
+- https://clashjichang.github.io/uploads/2025/09/3-20250928.txt
+- https://clashjichang.github.io/uploads/2025/09/4-20250928.txt
 
-### Sing-box订阅链接
+### 免费Sing-box节点订阅链接
 
-- https://clashjichang.github.io/uploads/2025/09/20250924.json
+- https://clashjichang.github.io/uploads/2025/09/20250928.json
 
-## 更多clash节点订阅 ：
+## 更多Clash节点订阅 ：
 
 
 ### 高速机场推荐1【<a href="https://www.nfsq.us/#/register?code=UTg5SIHV" target="_blank">农夫山泉</a>】
