@@ -174,41 +174,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 节点配置时常见错误有哪些？</h5></div>
-    <div class="panel-body">
-        常见错误包括端口号不匹配、UUID 错误、TLS 设置不正确或传输类型配置错误。这些都会导致连接失败。检查服务器配置与客户端参数一致性是解决问题的关键。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆参数该如何填写？</h5></div>
-    <div class="panel-body">
-        SSR 混淆参数位于节点配置中，通常选择如 tls1.2_ticket_auth 或 http_simple。参数字段可以自定义伪装主机或路径，以模拟正常流量行为，从而提高隐蔽性和抗封锁能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
-    <div class="panel-body">
-        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
-    <div class="panel-body">
-        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
-    <div class="panel-body">
-        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
-    <div class="panel-body">
-        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否可以管理多客户端节点？</h5></div>
-    <div class="panel-body">
-        可以。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。结合策略组使用，可灵活分配节点，实现多客户端管理和流量优化。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 全局代理与规则代理如何选择？</h5></div>
     <div class="panel-body">
         全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，根据需求灵活选择模式。<hr />    </div>
@@ -219,9 +184,44 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         ws+tls 模式利用 WebSocket 伪装成普通 HTTPS 流量，使得防火墙难以区分代理与正常访问。该模式兼容性强，适合部署在支持 Nginx 或 Caddy 的 Web 服务器上。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
+    <div class="panel-body">
+        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
     <div class="panel-body">
-        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。    </div>
+        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的混淆参数该如何填写？</h5></div>
+    <div class="panel-body">
+        SSR 混淆参数位于节点配置中，通常选择如 tls1.2_ticket_auth 或 http_simple。参数字段可以自定义伪装主机或路径，以模拟正常流量行为，从而提高隐蔽性和抗封锁能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否可以管理多客户端节点？</h5></div>
+    <div class="panel-body">
+        可以。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。结合策略组使用，可灵活分配节点，实现多客户端管理和流量优化。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
+    <div class="panel-body">
+        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Vmess 节点配置时常见错误有哪些？</h5></div>
+    <div class="panel-body">
+        常见错误包括端口号不匹配、UUID 错误、TLS 设置不正确或传输类型配置错误。这些都会导致连接失败。检查服务器配置与客户端参数一致性是解决问题的关键。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
+    <div class="panel-body">
+        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
+    <div class="panel-body">
+        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -250,16 +250,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-22-node-share-links.htm" title="Clash机场 | 11月22日22.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点分享">Clash机场 | 11月22日22.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-18-free-v2ray-subscribe.htm" title="Clash机场 | 11月18日23M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点分享">Clash机场 | 11月18日23M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-19-free-subscribe-node.htm" title="Clash机场 | 11月19日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享">Clash机场 | 11月19日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-free-v2ray-subscribe.htm" title="Clash机场 | 11月17日22.2M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点分享">Clash机场 | 11月17日22.2M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-20-clash-v2ray-ss-ssr.htm" title="Clash机场 | 11月20日22.1M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点分享">Clash机场 | 11月20日22.1M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="Clash机场 | 11月14日20.2M/S|免费SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享">Clash机场 | 11月14日20.2M/S|免费SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-21-free-high-speed-nodes.htm" title="Clash机场 | 11月21日20.2M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享">Clash机场 | 11月21日20.2M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-28-node-share.htm" title="Clash机场 | 11月28日20.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点分享">Clash机场 | 11月28日20.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-6-node-share.htm" title="Clash机场 | 12月6日22.7M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享">Clash机场 | 12月6日22.7M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-23-free-v2ray-subscribe.htm" title="Clash机场 | 11月23日18.8M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点分享">Clash机场 | 11月23日18.8M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-high-speed-nodes.htm" title="Clash机场 | 12月2日18M/S|免费SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享">Clash机场 | 12月2日18M/S|免费SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-v2ray-subscribe.htm" title="Clash机场 | 11月6日20.7M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点订阅节点分享">Clash机场 | 11月6日20.7M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-29-free-node-subscribe.htm" title="Clash机场 | 11月29日21.3M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">Clash机场 | 11月29日21.3M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-free-subscribe-node.htm" title="Clash机场 | 12月1日23M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">Clash机场 | 12月1日23M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-free-high-speed-nodes.htm" title="Clash机场 | 11月10日20M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点订阅节点分享">Clash机场 | 11月10日20M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-free-subscribe-node.htm" title="Clash机场 | 11月19日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享">Clash机场 | 11月19日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-v2ray.htm" title="Clash机场 | 11月13日20.3M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点订阅节点分享">Clash机场 | 11月13日20.3M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-v2ray-subscribe.htm" title="Clash机场 | 11月12日19.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">Clash机场 | 11月12日19.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a></li>
                     </ul>
     </div>
 </div>
@@ -271,7 +271,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
