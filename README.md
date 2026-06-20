@@ -1,4 +1,4 @@
-# Clash机场 | 6月13日22.4M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享  更新时间 2026-06-13 10:06:57
+# Clash机场 | 6月20日21.2M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点订阅节点分享  更新时间 2026-06-20 09:58:01
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashjichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashjichang.github.io/uploads/2026/06/0-20260613.yaml
-- https://clashjichang.github.io/uploads/2026/06/1-20260613.yaml
-- https://clashjichang.github.io/uploads/2026/06/2-20260613.yaml
-- https://clashjichang.github.io/uploads/2026/06/3-20260613.yaml
-- https://clashjichang.github.io/uploads/2026/06/4-20260613.yaml
+- https://clashjichang.github.io/uploads/2026/06/0-20260620.yaml
+- https://clashjichang.github.io/uploads/2026/06/1-20260620.yaml
+- https://clashjichang.github.io/uploads/2026/06/2-20260620.yaml
+- https://clashjichang.github.io/uploads/2026/06/3-20260620.yaml
+- https://clashjichang.github.io/uploads/2026/06/4-20260620.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashjichang.github.io/uploads/2026/06/0-20260613.txt
-- https://clashjichang.github.io/uploads/2026/06/1-20260613.txt
-- https://clashjichang.github.io/uploads/2026/06/2-20260613.txt
-- https://clashjichang.github.io/uploads/2026/06/3-20260613.txt
-- https://clashjichang.github.io/uploads/2026/06/4-20260613.txt
+- https://clashjichang.github.io/uploads/2026/06/0-20260620.txt
+- https://clashjichang.github.io/uploads/2026/06/1-20260620.txt
+- https://clashjichang.github.io/uploads/2026/06/2-20260620.txt
+- https://clashjichang.github.io/uploads/2026/06/3-20260620.txt
+- https://clashjichang.github.io/uploads/2026/06/4-20260620.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashjichang.github.io/uploads/2026/06/20260613.json
+- https://clashjichang.github.io/uploads/2026/06/20260620.json
 
 ## 更多Clash节点订阅 ：
 
