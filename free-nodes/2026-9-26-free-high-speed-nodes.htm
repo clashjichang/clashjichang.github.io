@@ -298,17 +298,18 @@ A：Quantumult在规则管理上更加细腻，适合高级用户。Stash和Loon
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/node-share-links-2026-9-25.htm">Clash机场 | 9月25日19.4M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点订阅节点分享</a></p>
+        <p>下一个：<a href="/free-nodes/free-v2ray-2026-9-27.htm">Clash机场 | 9月27日21.3M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点订阅节点分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
     <div class="panel-body">
-        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
+        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray QUIC 传输适合什么网络环境？</h5></div>
+    <div class="panel-heading"><h5>VLESS 在高封锁环境下的优势是什么？</h5></div>
     <div class="panel-body">
-        QUIC 基于 UDP 支持多路复用和零握手，降低延迟，提高吞吐量。适合高丢包、不稳定网络环境，可保证视频、游戏和即时通讯流量的稳定性和流畅体验。<hr />    </div>
+        VLESS 去掉了内置加密，依赖 TLS 层安全，减少被 DPI 检测的特征。结合 XTLS 或 Reality 模式，可以更好地隐藏流量，提高在高封锁网络中的稳定性与隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 是否还值得使用？</h5></div>
@@ -316,14 +317,29 @@ A：Quantumult在规则管理上更加细腻，适合高级用户。Stash和Loon
         虽然 SSR 的开发早已停止，但由于它配置简单且部分节点仍然兼容，仍有一定使用场景。不过建议用户逐步迁移到更安全的新协议如 VLESS 或 Trojan，以获得更佳性能与隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
-    <div class="panel-body">
-        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的分流规则如何实现广告拦截？</h5></div>
     <div class="panel-body">
         通过配置规则，将广告域名或请求路径匹配到黑名单策略，使请求直接阻断或重定向到本地地址。这样用户浏览网页或使用应用时可自动屏蔽大部分广告内容。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的策略组如何提升分流效率？</h5></div>
+    <div class="panel-body">
+        策略组可以将多个节点或规则组合在一起，实现按条件自动选择最佳节点。通过策略组，用户无需手动切换节点即可根据延迟、地理位置或流量类型自动分流，提高网络效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的多节点测速机制是怎样的？</h5></div>
+    <div class="panel-body">
+        Matsuri 使用并发测速机制，可同时对多个节点进行延迟与带宽测试。测试结果会自动排序，并可根据延迟或速度自动切换最优节点，提升连接体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray QUIC 传输适合什么网络环境？</h5></div>
+    <div class="panel-body">
+        QUIC 基于 UDP 支持多路复用和零握手，降低延迟，提高吞吐量。适合高丢包、不稳定网络环境，可保证视频、游戏和即时通讯流量的稳定性和流畅体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
+    <div class="panel-body">
+        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 还能用吗？</h5></div>
@@ -333,22 +349,7 @@ A：Quantumult在规则管理上更加细腻，适合高级用户。Stash和Loon
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 客户端延迟测试值不稳定怎么办？</h5></div>
     <div class="panel-body">
-        可通过调整 Hysteria2 的 `recv_window` 与 `send_window` 参数改善传输性能，同时确保服务器带宽充足。若使用移动网络，建议启用 BBR 拥塞控制并降低测速频率以减少波动。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的多节点测速机制是怎样的？</h5></div>
-    <div class="panel-body">
-        Matsuri 使用并发测速机制，可同时对多个节点进行延迟与带宽测试。测试结果会自动排序，并可根据延迟或速度自动切换最优节点，提升连接体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组如何提升分流效率？</h5></div>
-    <div class="panel-body">
-        策略组可以将多个节点或规则组合在一起，实现按条件自动选择最佳节点。通过策略组，用户无需手动切换节点即可根据延迟、地理位置或流量类型自动分流，提高网络效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 在高封锁环境下的优势是什么？</h5></div>
-    <div class="panel-body">
-        VLESS 去掉了内置加密，依赖 TLS 层安全，减少被 DPI 检测的特征。结合 XTLS 或 Reality 模式，可以更好地隐藏流量，提高在高封锁网络中的稳定性与隐蔽性。    </div>
+        可通过调整 Hysteria2 的 `recv_window` 与 `send_window` 参数改善传输性能，同时确保服务器带宽充足。若使用移动网络，建议启用 BBR 拥塞控制并降低测速频率以减少波动。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -396,16 +397,16 @@ A：Quantumult在规则管理上更加细腻，适合高级用户。Stash和Loon
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-17.htm" title="Clash机场 | 9月17日20.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点订阅节点分享">Clash机场 | 9月17日20.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-1.htm" title="Clash机场 | 9月1日22.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点订阅节点分享">Clash机场 | 9月1日22.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-subscribe-node.htm" title="Clash机场 | 8月22日22.5M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点订阅节点分享">Clash机场 | 8月22日22.5M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-node-share.htm" title="Clash机场 | 8月14日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点分享">Clash机场 | 8月14日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-11.htm" title="Clash机场 | 8月11日19.2M/S|免费Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点分享">Clash机场 | 8月11日19.2M/S|免费Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-subscribe-node.htm" title="Clash机场 | 9月2日21.2M/S|免费SSR节点/V2ray节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享">Clash机场 | 9月2日21.2M/S|免费SSR节点/V2ray节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-19.htm" title="Clash机场 | 8月19日19.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点订阅节点分享">Clash机场 | 8月19日19.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-v2ray-subscribe.htm" title="Clash机场 | 8月18日19.1M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点订阅节点分享">Clash机场 | 8月18日19.1M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-25.htm" title="Clash机场 | 9月25日19.4M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点订阅节点分享">Clash机场 | 9月25日19.4M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-23.htm" title="Clash机场 | 8月23日19.6M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点分享">Clash机场 | 8月23日19.6M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-8-node-share.htm" title="Clash机场 | 9月8日22.7M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点订阅节点分享">Clash机场 | 9月8日22.7M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-2026-9-27.htm" title="Clash机场 | 9月27日21.3M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点订阅节点分享">Clash机场 | 9月27日21.3M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-2026-9-3.htm" title="Clash机场 | 9月3日19.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点订阅节点分享">Clash机场 | 9月3日19.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-high-speed-nodes.htm" title="Clash机场 | 9月4日19.3M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">Clash机场 | 9月4日19.3M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-18-node-share.htm" title="Clash机场 | 9月18日19.4M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点订阅节点分享">Clash机场 | 9月18日19.4M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-10-3.htm" title="Clash机场 | 10月3日23M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅节点分享">Clash机场 | 10月3日23M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-2026-10-1.htm" title="Clash机场 | 10月1日19.7M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅节点分享">Clash机场 | 10月1日19.7M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-19.htm" title="Clash机场 | 9月19日19.1M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点订阅节点分享">Clash机场 | 9月19日19.1M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-5.htm" title="Clash机场 | 9月5日20.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点订阅节点分享">Clash机场 | 9月5日20.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-11.htm" title="Clash机场 | 9月11日21.6M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享">Clash机场 | 9月11日21.6M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -417,10 +418,10 @@ A：Quantumult在规则管理上更加细腻，适合高级用户。Stash和Loon
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                     </ul>
     </div>
